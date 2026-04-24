@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="bs" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Od Nule do Heroja — Kurs za Web Developere</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold gradient-text" href="index.html">
+        <i class="bi bi-code-slash me-2"></i>Od Nule do Heroja
+      </a>
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <a href="index.html" class="nav-link-custom active">Početna</a>
+        <a href="course.html" class="nav-link-custom">Kurs</a>
+        <a href="project.html" class="nav-link-custom">Projekat</a>
+        <button class="btn btn-theme-toggle" id="themeToggle" title="Promijeni temu">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- MAIN HERO -->
+  <section class="hero-main d-flex align-items-center">
+    <div class="hero-bg-orb orb-1"></div>
+    <div class="hero-bg-orb orb-2"></div>
+    <div class="hero-bg-orb orb-3"></div>
+    <div class="container position-relative z-1">
+      <div class="row align-items-center min-vh-100 py-5">
+        <div class="col-lg-7 pt-5">
+          <div class="badge-pill mb-4">
+            <i class="bi bi-rocket-takeoff me-2"></i>Kurs za početnike · Potpuno besplatno
+          </div>
+          <h1 class="hero-title mb-4">
+            Od <span class="gradient-text">Nule</span><br />
+            do <span class="gradient-text">Heroja</span>
+          </h1>
+          <p class="hero-subtitle mb-5">
+            Naučite programiranje od prve linije koda do deployment-a pravog projekta.
+            Bez prethodnog iskustva. Korak po korak. Na bosanskom jeziku.
+          </p>
+          <div class="d-flex flex-wrap gap-3">
+            <a href="course.html" class="btn btn-primary-gradient btn-lg px-5 py-3">
+              <i class="bi bi-play-circle me-2"></i>Počni kurs
+            </a>
+            <a href="project.html" class="btn btn-outline-glass btn-lg px-5 py-3">
+              <i class="bi bi-folder2-open me-2"></i>Vidi projekat
+            </a>
+          </div>
+          <div class="hero-stats mt-5 d-flex flex-wrap gap-4">
+            <div class="stat-item">
+              <span class="stat-number">15</span>
+              <span class="stat-label">Modula</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">0</span>
+              <span class="stat-label">Potrebnog iskustva</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Praktično</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+          <div class="hero-code-window">
+            <div class="code-window-bar">
+              <span class="dot dot-red"></span>
+              <span class="dot dot-yellow"></span>
+              <span class="dot dot-green"></span>
+              <span class="ms-2 text-muted small">hello-world.cs</span>
+            </div>
+            <pre class="code-window-body"><span class="code-comment">// Tvoj prvi program</span>
+<span class="code-keyword">string</span> ime = <span class="code-string">"Aldin"</span>;
+<span class="code-keyword">int</span> godine = <span class="code-number">0</span>;
+<span class="code-keyword">bool</span> uce = <span class="code-bool">true</span>;
+
+Console.<span class="code-fn">WriteLine</span>(
+  <span class="code-string">$"Zdravo, {ime}!"</span>
+);
+
+<span class="code-comment">// Output: Zdravo, Aldin!</span>
+<span class="code-comment">// 🎉 Čestitamo — ti si developer!</span></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <i class="bi bi-chevron-double-down"></i>
+    </div>
+  </section>
+
+  <!-- DVIJE KARTICE — HERO SEKCIJE -->
+  <section class="section-cards py-6">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Gdje želiš krenuti?</h2>
+        <p class="section-subtitle">Odaberi svoju putanju — kurs od nule ili pravi projekat</p>
+      </div>
+
+      <div class="row g-4 justify-content-center">
+
+        <!-- KARTICA 1: KURS -->
+        <div class="col-md-6 col-lg-5">
+          <a href="course.html" class="card-hero-link">
+            <div class="card-hero card-course">
+              <div class="card-hero-glow"></div>
+              <div class="card-hero-icon mb-4">
+                <i class="bi bi-mortarboard-fill"></i>
+              </div>
+              <div class="card-hero-badge">15 modula</div>
+              <h3 class="card-hero-title">Kurs: Od Nule do Heroja</h3>
+              <p class="card-hero-desc">
+                Kompletni vodič za početnike. Od prvog "Hello World" do profesionalnog developera.
+                Alati, koncepti, arhitektura, workflow — sve na jednom mjestu.
+              </p>
+              <ul class="card-hero-features">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Komandna linija i Git</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>C#, TypeScript, Vue 3</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Baze podataka i SQL</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Backend API-ji i Clean Architecture</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>AI kao tvoj asistent</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Kako dobiti posao</li>
+              </ul>
+              <div class="card-hero-cta">
+                Počni učiti <i class="bi bi-arrow-right ms-2"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- KARTICA 2: PROJEKAT -->
+        <div class="col-md-6 col-lg-5">
+          <a href="project.html" class="card-hero-link">
+            <div class="card-hero card-project">
+              <div class="card-hero-glow"></div>
+              <div class="card-hero-icon mb-4">
+                <i class="bi bi-buildings-fill"></i>
+              </div>
+              <div class="card-hero-badge">Pravi projekat</div>
+              <h3 class="card-hero-title">Projekat: Job Portal</h3>
+              <p class="card-hero-desc">
+                Arhitektura pravog enterprise projekta objašnjena kao za dijete od 5 godina.
+                Clean Architecture, CQRS, Repository Pattern — vizualno i jasno.
+              </p>
+              <ul class="card-hero-features">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Clean Architecture — 4 sloja</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>CQRS sa MediatR-om</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Repository i Unit of Work pattern</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>JWT autentifikacija</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Vue 3 + Nuxt frontend</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i>Dijagrami i vizualizacije</li>
+              </ul>
+              <div class="card-hero-cta">
+                Istraži projekat <i class="bi bi-arrow-right ms-2"></i>
+              </div>
+            </div>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK -->
+  <section class="section-tech py-6">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="section-title">Tehnologije koje ćeš naučiti</h2>
+      </div>
+      <div class="tech-grid">
+        <div class="tech-item"><i class="bi bi-filetype-cs"></i><span>C# / .NET</span></div>
+        <div class="tech-item"><i class="bi bi-filetype-ts"></i><span>TypeScript</span></div>
+        <div class="tech-item"><i class="bi bi-filetype-vue"></i><span>Vue 3 / Nuxt</span></div>
+        <div class="tech-item"><i class="bi bi-database-fill"></i><span>SQL Server</span></div>
+        <div class="tech-item"><i class="bi bi-git"></i><span>Git / GitHub</span></div>
+        <div class="tech-item"><i class="bi bi-terminal-fill"></i><span>VS Code</span></div>
+        <div class="tech-item"><i class="bi bi-robot"></i><span>AI asistenti</span></div>
+        <div class="tech-item"><i class="bi bi-diagram-3-fill"></i><span>Clean Architecture</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer py-4">
+    <div class="container text-center">
+      <p class="mb-1 fw-semibold gradient-text">Od Nule do Heroja</p>
+      <p class="text-muted small mb-0">Napravljen s ljubavlju za buduće developere · <i class="bi bi-heart-fill text-danger"></i></p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

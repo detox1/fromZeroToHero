@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="bs" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projekat — Od Nule do Heroja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold gradient-text" href="index.html">
+        <i class="bi bi-code-slash me-2"></i>Od Nule do Heroja
+      </a>
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <a href="index.html" class="nav-link-custom">Početna</a>
+        <a href="course.html" class="nav-link-custom">Kurs</a>
+        <a href="project.html" class="nav-link-custom active">Projekat</a>
+        <button class="btn btn-theme-toggle" id="themeToggle" title="Promijeni temu">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="course-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="course-sidebar" id="sidebar">
+      <div class="sidebar-label">Job Portal — Arhitektura</div>
+      <button class="sidebar-nav-item active" data-section="p0">
+        <span class="module-num"><i class="bi bi-house-fill"></i></span>
+        Uvod
+      </button>
+      <button class="sidebar-nav-item" data-section="p1">
+        <span class="module-num"><i class="bi bi-building"></i></span>
+        Fabrika igračaka — Pregled
+      </button>
+      <button class="sidebar-nav-item" data-section="p2">
+        <span class="module-num">1</span>
+        Sloj 1 — Domain (Pravila)
+      </button>
+      <button class="sidebar-nav-item" data-section="p3">
+        <span class="module-num">2</span>
+        Sloj 2 — Application (Mozak)
+      </button>
+      <button class="sidebar-nav-item" data-section="p4">
+        <span class="module-num">3</span>
+        Sloj 3 — Infrastructure (Alati)
+      </button>
+      <button class="sidebar-nav-item" data-section="p5">
+        <span class="module-num">4</span>
+        Sloj 4 — Hosts (Ulaz)
+      </button>
+      <button class="sidebar-nav-item" data-section="p6">
+        <span class="module-num"><i class="bi bi-diagram-2"></i></span>
+        Kako poveži slojeve
+      </button>
+      <button class="sidebar-nav-item" data-section="p7">
+        <span class="module-num"><i class="bi bi-arrow-right-circle"></i></span>
+        Šta se desi kad klikneš "Poslovi"
+      </button>
+
+      <div class="sidebar-label mt-3">Za buduće developere</div>
+      <button class="sidebar-nav-item" data-section="b0">
+        <span class="module-num"><i class="bi bi-mortarboard"></i></span>
+        OOP — Četiri stuba
+      </button>
+      <button class="sidebar-nav-item" data-section="b1">
+        <span class="module-num"><i class="bi bi-boxes"></i></span>
+        Repository + Unit of Work
+      </button>
+      <button class="sidebar-nav-item" data-section="b2">
+        <span class="module-num"><i class="bi bi-lightning"></i></span>
+        CQRS sa MediatR-om
+      </button>
+      <button class="sidebar-nav-item" data-section="b3">
+        <span class="module-num"><i class="bi bi-shield-lock"></i></span>
+        JWT Autentifikacija
+      </button>
+      <button class="sidebar-nav-item" data-section="b4">
+        <span class="module-num"><i class="bi bi-layout-text-window"></i></span>
+        Vue 3 + Nuxt Frontend
+      </button>
+      <button class="sidebar-nav-item" data-section="b5">
+        <span class="module-num"><i class="bi bi-map"></i></span>
+        Mapa učenja
+      </button>
+      <button class="sidebar-nav-item" data-section="b6">
+        <span class="module-num"><i class="bi bi-lightning-charge"></i></span>
+        Brzi referentni vodič
+      </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="course-main">
+
+      <!-- P0: UVOD -->
+      <section class="content-section active page-fade-in" id="p0">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-buildings-fill me-1"></i> Job Portal Projekat</div>
+          <h1 class="module-title">Arhitektura pravog projekta</h1>
+          <p class="lead opacity-75">Objašnjeno kao za dijete od 5 godina — i za buduće .NET full-stack developere.</p>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-info-circle-fill"></i>
+          <div><strong>Ovaj projekat je stvaran.</strong> Job Portal je pravi enterprise sistem napisan u .NET 10 Clean Architecture s Nuxt 4 frontendom. Sve što vidiš ovdje je iz pravog koda — nije primjer iz tutoriala.</div>
+        </div>
+
+        <div class="row g-3 my-4">
+          <div class="col-md-4">
+            <div class="pattern-card text-center">
+              <div class="pattern-card-icon">🏭</div>
+              <div class="pattern-card-title">Fabrika igračaka</div>
+              <div class="pattern-card-desc">Objašnjenje arhitekture kroz analogiju fabrike — za apsolutne početnike.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pattern-card text-center">
+              <div class="pattern-card-icon">📐</div>
+              <div class="pattern-card-title">Clean Architecture</div>
+              <div class="pattern-card-desc">4 sloja, jasna pravila zavisnosti, objašnjeno i vizualno prikazano.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pattern-card text-center">
+              <div class="pattern-card-icon">🔬</div>
+              <div class="pattern-card-title">Dubinsko objašnjenje</div>
+              <div class="pattern-card-desc">OOP, CQRS, Repository, JWT — sve iz perspektive junior developera.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex gap-3 flex-wrap">
+          <button class="btn btn-primary-gradient px-4 py-2" onclick="showSection('p1')">
+            Počni s Fabrikom <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+          <button class="btn btn-outline-glass px-4 py-2" onclick="showSection('b0')">
+            Idi na dubinsko objašnjenje <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- P1: FABRIKA -->
+      <section class="content-section" id="p1">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-building me-1"></i> Pregled</div>
+          <h1 class="module-title">Zamislite: Fabrika igračaka 🏭</h1>
+        </div>
+
+        <p>Zamoislite da imate fabriku igračaka. Fabrika ima različite <strong>sobe</strong> i svaka soba ima <strong>jedan posao</strong>. Niko ne radi posao drugog. To je cijela ideja ovog projekta.</p>
+
+        <div class="info-box tip">
+          <i class="bi bi-folder2-open"></i>
+          <div><strong>Fabrika ima dvije zgrade:</strong><br/>
+            <code>JobPortal/</code> — stara zgrada (zamjenjuje se, ignoriši je)<br/>
+            <code>src/</code> — nova zgrada (ovo je prava, organizovana)
+          </div>
+        </div>
+
+        <h4 class="mt-4">Nova zgrada ima 4 sprata</h4>
+        <div class="architecture-diagram">
+          <div class="layer-card layer-host">
+            <div class="layer-label">Sprat 4 — ULAZNA VRATA</div>
+            <div class="layer-title">Hosts/ — API + Website</div>
+            <div class="layer-desc"><code>JobPortal.Api</code> — .NET vrata · <code>Skipsearch.Client</code> — website koji korisnici vide</div>
+          </div>
+          <div class="layer-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="layer-card layer-infra">
+            <div class="layer-label">Sprat 3 — SOBA S ALATIMA</div>
+            <div class="layer-title">Infrastructure/ — Baza, Servisi, Email</div>
+            <div class="layer-desc">AppDbContext, Repositories, TokenService, SendEmailService, LinkedIn adapter</div>
+          </div>
+          <div class="layer-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="layer-card layer-app">
+            <div class="layer-label">Sprat 2 — MOZAK</div>
+            <div class="layer-title">Application/ — Logika, Handleri, CQRS</div>
+            <div class="layer-desc">Commands, Queries, Handlers — čista logika, nema baza nema weba</div>
+          </div>
+          <div class="layer-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="layer-card layer-domain">
+            <div class="layer-label">Sprat 1 — PRAVILA (SRCE)</div>
+            <div class="layer-title">Domain/ — Entiteti, Interfejsi</div>
+            <div class="layer-desc">User, AppliedJob, LikedJob — blueprinti. IUserRepository — obećanja. Nula vanjskih zavisnosti.</div>
+          </div>
+        </div>
+
+        <div class="info-box rule mt-3">
+          <i class="bi bi-bookmark-fill"></i>
+          <div><strong>Zlatno pravilo:</strong> Svaki sprat razgovara samo sa spratom ISPOD sebe. Nikad ne preskačeš spratove. Nikad ne ideš GORE.</div>
+        </div>
+
+        <h4 class="mt-4">Zašto ovakva struktura?</h4>
+        <div class="row g-3">
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">✓</div><div><div class="walkthrough-step-layer">Testabilnost</div><div class="walkthrough-step-text">Možeš zamijeniti pravu bazu s lažnom za testove — mozak ne primijeti razliku</div></div></div></div>
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">✓</div><div><div class="walkthrough-step-layer">Zamjenjivost</div><div class="walkthrough-step-text">Zamijeniti SQL Server za PostgreSQL = promijeni jednu klasu</div></div></div></div>
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">✓</div><div><div class="walkthrough-step-layer">Čitljivost</div><div class="walkthrough-step-text">Novi developer odmah zna gdje da gleda za svaki tip koda</div></div></div></div>
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">✓</div><div><div class="walkthrough-step-layer">Skalabilnost</div><div class="walkthrough-step-text">Module se mogu izvući u zasebne servise kad projekt naraste</div></div></div></div>
+        </div>
+      </section>
+
+      <!-- P2: DOMAIN -->
+      <section class="content-section" id="p2">
+        <div class="module-header">
+          <div class="module-number-badge">Sprat 1</div>
+          <h1 class="module-title">Domain — Soba pravila 📐</h1>
+        </div>
+        <p>Ovdje žive <strong>blueprinti</strong>. Razmišljaj o ovome kao o nacrtima za igračke.</p>
+        <p>Kaže: <em>"Korisnik izgleda ovako. Posao izgleda ovako."</em></p>
+
+        <h4>Entiteti — šta stvari JESU</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span><span class="text-muted small">Domain/Entities/User.cs</span></div>
+          <pre>public class User
+{
+    public Guid Id { get; set; }
+    public string Name { get; set; }
+    public string Email { get; set; }
+    public string Password { get; set; }
+}
+// Ovo je blueprint. Govori "Korisnik je stvar koja ima Id, Ime, Email i Lozinku."</pre>
+        </div>
+
+        <h4 class="mt-4">Interfejsi — OBEĆANJA</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span><span class="text-muted small">Domain/Repositories/IUserRepository.cs</span></div>
+          <pre>public interface IUserRepository
+{
+    Task&lt;User&gt; GetByIdAsync(Guid id);
+    Task AddAsync(User user);
+}
+// IUserRepository je samo obećanje.
+// Kaže "Ne zanima me KAKO snemaš korisnika, samo da MOŽEŠ."
+// Stvarno snimanje je na Spratu 3.</pre>
+        </div>
+
+        <h4 class="mt-4">Šta se nalazi u Domain sloju</h4>
+        <table class="content-table">
+          <thead><tr><th>Folder</th><th>Sadržaj</th></tr></thead>
+          <tbody>
+            <tr><td><code>Domain/Entities/</code></td><td>User, AppliedJob, LikedJob, PushSubscription, UserDocument</td></tr>
+            <tr><td><code>Domain/Repositories/</code></td><td>IUserRepository, IAppliedJobRepository, IUnitOfWork</td></tr>
+            <tr><td><code>Domain/Enums/</code></td><td>Fiksne liste vrijednosti: JobType, JobStatus</td></tr>
+          </tbody>
+        </table>
+
+        <div class="info-box rule">
+          <i class="bi bi-bookmark-fill"></i>
+          <div><strong>Pravilo Domain sloja:</strong> Ovaj sloj ima NULA zavisnosti na bilo šta drugo. Ne referencira Infrastructure. Ne referencira web framework. Apsolutno ništa.</div>
+        </div>
+      </section>
+
+      <!-- P3: APPLICATION -->
+      <section class="content-section" id="p3">
+        <div class="module-header">
+          <div class="module-number-badge">Sprat 2</div>
+          <h1 class="module-title">Application — Mozak 🧠</h1>
+        </div>
+        <p>Ovdje se dešava <strong>razmišljanje</strong>. Nema koda za bazu. Nema web koda. Samo čista logika.</p>
+        <p>Koristi <strong>CQRS</strong> — modernu riječ za razdvajanje stvari u dva segmenta:</p>
+
+        <div class="cqrs-split">
+          <div class="cqrs-side cqrs-query">
+            <div class="cqrs-label"><i class="bi bi-eye me-1"></i>Queries = samo ČITANJE</div>
+            <ul class="small ps-3 mb-0">
+              <li><code>GetJobsQuery</code> — daj mi listu poslova</li>
+              <li><code>GetJobDetailsQuery</code> — daj mi detalje posla #5</li>
+              <li><code>GetUserQuery</code> — daj mi info korisnika</li>
+            </ul>
+            <div class="mt-2 small opacity-65">Nikad ne mijenja podatke. Samo čita.</div>
+          </div>
+          <div class="cqrs-side cqrs-command">
+            <div class="cqrs-label"><i class="bi bi-pencil me-1"></i>Commands = MIJENJANJE</div>
+            <ul class="small ps-3 mb-0">
+              <li><code>CreateUserCommand</code> — napravi korisnika</li>
+              <li><code>ApplyForJobCommand</code> — apliciraj na posao</li>
+              <li><code>LikeJobCommand</code> — lajkaj posao</li>
+            </ul>
+            <div class="mt-2 small opacity-65">Mijenja podatke. Vraća uspjeh/neuspjeh.</div>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Svaki Query/Command ima Handler — radnika</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Pitanje: "daj mi listu poslova"
+public class GetJobsQuery : IQuery&lt;List&lt;JobDto&gt;&gt;
+{
+    public string? SearchTerm { get; set; }
+}
+
+// Odgovor: handler koji radi posao
+public class GetJobsQueryHandler : IQueryHandler&lt;GetJobsQuery, List&lt;JobDto&gt;&gt;
+{
+    private readonly IJobExternalService _jobService;  // obećanje iz Domain sloja
+
+    public GetJobsQueryHandler(IJobExternalService jobService)
+    {
+        _jobService = jobService; // ubrizgano izvana — handler ne pravi ovo sam
+    }
+
+    public async Task&lt;List&lt;JobDto&gt;&gt; Handle(GetJobsQuery query, CancellationToken ct)
+    {
+        return await _jobService.GetJobsAsync(query.SearchTerm);
+    }
+}</pre>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div>Handler prima <code>IJobExternalService</code> — interfejs (obećanje). Ne zna i nije mu bitno da je <code>JobService</code> u Infrastructure sloju prava klasa koja pravi HTTP pozive.</div>
+        </div>
+
+        <h4 class="mt-4">MediatR — Sekretar koji rješava ko radi šta</h4>
+        <div class="flow-diagram">
+          <div class="flow-step">
+            <div class="flow-step-num">1</div>
+            <div class="flow-step-icon">📋</div>
+            <div class="flow-step-label">API endpoint</div>
+            <div class="flow-step-desc">Šalje <code>GetJobsQuery</code> MediatR-u</div>
+          </div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">2</div>
+            <div class="flow-step-icon">📞</div>
+            <div class="flow-step-label">MediatR (Sekretar)</div>
+            <div class="flow-step-desc">Traži: "ko rukuje GetJobsQuery?" Pronalazi GetJobsQueryHandler</div>
+          </div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">3</div>
+            <div class="flow-step-icon">⚙️</div>
+            <div class="flow-step-label">GetJobsQueryHandler</div>
+            <div class="flow-step-desc">Dobija Query, izvršava logiku, vraća rezultat</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- P4: INFRASTRUCTURE -->
+      <section class="content-section" id="p4">
+        <div class="module-header">
+          <div class="module-number-badge">Sprat 3</div>
+          <h1 class="module-title">Infrastructure — Soba s alatima 🔧</h1>
+        </div>
+        <p>Ovdje se dešava <strong>pravi rad</strong>. Baza podataka, HTTP pozivi, emaili, LinkedIn login...</p>
+
+        <h4>Šta je u ovom sloju</h4>
+        <table class="content-table">
+          <thead><tr><th>Fajl</th><th>Šta radi</th></tr></thead>
+          <tbody>
+            <tr><td><code>AppDbContext.cs</code></td><td>Stvarna veza na SQL Server bazu</td></tr>
+            <tr><td><code>UserRepository.cs</code></td><td>ISPUNJAVA obećanje <code>IUserRepository</code> iz Domain sloja</td></tr>
+            <tr><td><code>JobService.cs</code></td><td>Poziva externi API za listu poslova</td></tr>
+            <tr><td><code>SendEmailService.cs</code></td><td>Šalje prave emailove</td></tr>
+            <tr><td><code>TokenService.cs</code></td><td>Pravi JWT login tokene</td></tr>
+            <tr><td><code>UnitOfWork.cs</code></td><td>Omotava snimanje u bazu</td></tr>
+            <tr><td><code>DependencyInjection.cs</code></td><td>Soba za žičanje — ko šta dobije</td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="mt-4">Ispunjavanje obećanja — Repository implementacija</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span><span class="text-muted small">Infrastructure/Repositories/UserRepository.cs</span></div>
+          <pre>public class UserRepository : IUserRepository  // ispunjava obećanje!
+{
+    private readonly AppDbContext _context;
+
+    public UserRepository(AppDbContext context)
+    {
+        _context = context;
+    }
+
+    public async Task&lt;User&gt; GetByIdAsync(Guid id)
+    {
+        return await _context.Users.FindAsync(id); // stvarni SQL upit via EF Core
+    }
+
+    public async Task AddAsync(User user)
+    {
+        await _context.Users.AddAsync(user); // priprema INSERT
+    }
+}</pre>
+        </div>
+
+        <h4 class="mt-4">Soba za žičanje — DependencyInjection.cs</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span><span class="text-muted small">Infrastructure/DependencyInjection.cs</span></div>
+          <pre>services.AddScoped&lt;IUserRepository, UserRepository&gt;();
+// "Kad iko pita za IUserRepository, daj mu UserRepository"
+
+services.AddScoped&lt;IUnitOfWork, UnitOfWork&gt;();
+services.AddScoped&lt;ISendEmailService, SendEmailService&gt;();
+services.AddScoped&lt;IJobExternalService, JobService&gt;();</pre>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div><strong>Ovo je magija:</strong> Mozak (Application) kaže "daj mi IUserRepository". Soba za žičanje kaže "evo ti UserRepository". Mozak ne zna i nije mu bitno šta točno dobija — samo da ispunjava obećanje.</div>
+        </div>
+      </section>
+
+      <!-- P5: HOSTS -->
+      <section class="content-section" id="p5">
+        <div class="module-header">
+          <div class="module-number-badge">Sprat 4</div>
+          <h1 class="module-title">Hosts — Ulazna vrata 🚪</h1>
+        </div>
+        <p>Dva ulaza u sistem:</p>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="layer-card layer-host h-100">
+              <div class="layer-label">Ulaz 1 — API</div>
+              <div class="layer-title">JobPortal.Api</div>
+              <div class="layer-desc mb-3">.NET 10 Minimal API. Prima HTTP zahtjeve, poziva Application handlere, vraća JSON odgovore.</div>
+              <div class="code-block mb-0">
+                <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+                <pre style="font-size:0.75rem">// Program.cs
+app.AddApplication();
+app.AddInfrastructure();
+app.AddAuthentication();
+app.MapEndpoints();</pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="layer-card layer-domain h-100">
+              <div class="layer-label">Ulaz 2 — Website</div>
+              <div class="layer-title">Skipsearch.Client (Nuxt/Vue)</div>
+              <div class="layer-desc mb-3">Website koji korisnici vide u browseru. Vue 3 komponente, Pinia stanje, Nuxt routing.</div>
+              <div class="code-block mb-0">
+                <div class="code-block-header"><span class="code-block-lang">text</span></div>
+                <pre style="font-size:0.75rem">app/pages/
+  index.vue         ← naslovna
+  jobs/[id].vue     ← detalji posla
+  login.vue         ← login stranica
+  profile.vue       ← profil korisnika
+  applied-jobs.vue  ← poslovi gdje si aplicirao</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- P6: POVEZIVANJE -->
+      <section class="content-section" id="p6">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-diagram-2 me-1"></i> Veze</div>
+          <h1 class="module-title">Kako se slojevi spajaju</h1>
+        </div>
+
+        <h4>Inversion of Control — Magični trik</h4>
+        <p>Normalno bi rekao: <em>"Mozak, koristi UserRepository da snimiš korisnika."</em></p>
+        <p>Sa IoC kažeš: <em>"Mozak, samo traži IUserRepository. Neko drugi će odlučiti šta to je."</em></p>
+
+        <div class="architecture-diagram">
+          <div class="row g-2 align-items-center">
+            <div class="col text-center">
+              <div class="layer-card layer-app text-center mb-0">
+                <div class="layer-label">Application/Mozak</div>
+                <div class="layer-title">Traži: IUserRepository</div>
+              </div>
+            </div>
+            <div class="col-auto text-center" style="font-size:2rem">→</div>
+            <div class="col text-center">
+              <div class="layer-card layer-host text-center mb-0">
+                <div class="layer-label">DI Container</div>
+                <div class="layer-title">"Evo ti UserRepository!"</div>
+              </div>
+            </div>
+            <div class="col-auto text-center" style="font-size:2rem">→</div>
+            <div class="col text-center">
+              <div class="layer-card layer-infra text-center mb-0">
+                <div class="layer-label">Infrastructure</div>
+                <div class="layer-title">UserRepository ispunjava obećanje</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Unit of Work — Sve ili ništa</h4>
+        <p>Zamislite da kupuješ Lego I knjigu. Ako prodavnica ostane bez knjige na pola transakcije, ne želiš platiti samo Lego i dobiti ništa. Ili <strong>oboje</strong> prolazi, ili <strong>ništa</strong> ne prolazi.</p>
+
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// U handleru:
+await _userRepository.AddAsync(noviKorisnik);
+await _appliedJobRepository.AddAsync(noviAppliciraPostak);
+await _unitOfWork.SaveChangesAsync(); // JEDAN commit — oba ili nijedan</pre>
+        </div>
+
+        <div class="info-box good">
+          <i class="bi bi-check-circle-fill"></i>
+          <div>Ovo se direktno mapira na <strong>database transakciju</strong>. Ako bilo šta ne uspije, cijela transakcija se poništava. Podaci ostaju konzistentni.</div>
+        </div>
+      </section>
+
+      <!-- P7: WALKTHROUGH -->
+      <section class="content-section" id="p7">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-arrow-right-circle me-1"></i> Walkthrough</div>
+          <h1 class="module-title">Šta se desi kad klikneš "Poslovi" 🖱️</h1>
+        </div>
+        <p>Pratimo pravi zahtjev kroz svaki sloj sistema — korak po korak.</p>
+
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">1</div>
+          <div><div class="walkthrough-step-layer">Browser</div><div class="walkthrough-step-text">Klikneš "Poslovi" u navigaciji → Nuxt stranica <code>app/pages/jobs/index.vue</code></div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">2</div>
+          <div><div class="walkthrough-step-layer">Nuxt Frontend</div><div class="walkthrough-step-text"><code>onMounted()</code> se okida → poziva <code>await $fetch('/api/jobs')</code></div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">3</div>
+          <div><div class="walkthrough-step-layer">Mreža</div><div class="walkthrough-step-text">HTTP GET /api/jobs zahtjev putuje do servera</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">4</div>
+          <div><div class="walkthrough-step-layer">JobPortal.Api (Hosts)</div><div class="walkthrough-step-text">Program.cs endpoint prima zahtjev → šalje <code>new GetJobsQuery()</code> MediatR-u</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">5</div>
+          <div><div class="walkthrough-step-layer">MediatR (Sekretar)</div><div class="walkthrough-step-text">Gleda: "Ko rukuje GetJobsQuery?" → Pronalazi <code>GetJobsQueryHandler</code> → Poziva ga</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">6</div>
+          <div><div class="walkthrough-step-layer">Application (Mozak)</div><div class="walkthrough-step-text"><code>GetJobsQueryHandler</code> prima query → traži <code>IJobExternalService</code> za poslove</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">7</div>
+          <div><div class="walkthrough-step-layer">Infrastructure (Alati)</div><div class="walkthrough-step-text"><code>JobService</code> pravi HTTP poziv na externi API za poslove → deserijalizira JSON → vraća <code>List&lt;JobDto&gt;</code></div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">8</div>
+          <div><div class="walkthrough-step-layer">Povratak gore</div><div class="walkthrough-step-text">JobService → Handler → MediatR → API endpoint → JSON serijalizacija → HTTP 200 OK</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">9</div>
+          <div><div class="walkthrough-step-layer">Nuxt Frontend</div><div class="walkthrough-step-text">Prima JSON niz poslova → Vue renderuje kartice poslova na ekranu</div></div>
+        </div>
+
+        <div class="info-box tip mt-3">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div>Poslovi dolaze iz <strong>externog API-ja</strong> (ne iz ove baze podataka) — zato postoji <code>JobService</code> koji pravi HTTP pozive prema van.</div>
+        </div>
+      </section>
+
+      <!-- B0: OOP -->
+      <section class="content-section" id="b0">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-mortarboard me-1"></i> Za developere</div>
+          <h1 class="module-title">OOP — Četiri stuba 🏛️</h1>
+        </div>
+        <p>Objektno-orijentisano programiranje (OOP) kaže: modeluj kod kao stvari iz stvarnog života. Klasa je blueprint. Objekat je instanca napravljena iz tog blueprinta.</p>
+
+        <div class="row g-3 my-3">
+          <div class="col-md-6">
+            <div class="pillar-card">
+              <div class="pillar-icon">🔒</div>
+              <div class="pillar-title">1. Enkapsulacija</div>
+              <div class="pillar-tagline">"Mind your own business"</div>
+              <div class="code-block mt-2">
+                <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+                <pre style="font-size:0.75rem">public class User
+{
+    private string _passwordHash; // skriveno!
+
+    public void SetPassword(string plain)
+    {
+        _passwordHash = Hash(plain);
+    }
+    // Vanjski kod ne vidi hash logiku
+}</pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pillar-card">
+              <div class="pillar-icon">🎭</div>
+              <div class="pillar-title">2. Apstrakcija</div>
+              <div class="pillar-tagline">"Svejedno mi je kako, samo uradi"</div>
+              <div class="code-block mt-2">
+                <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+                <pre style="font-size:0.75rem">public interface IUserRepository
+{
+    Task&lt;User&gt; GetByIdAsync(Guid id);
+    Task AddAsync(User user);
+}
+// Ne znamo je li SQL, MongoDB ili fajl</pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pillar-card">
+              <div class="pillar-icon">🧬</div>
+              <div class="pillar-title">3. Nasljeđivanje</div>
+              <div class="pillar-tagline">"Dobiješ sve što ja imam"</div>
+              <div class="code-block mt-2">
+                <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+                <pre style="font-size:0.75rem">public class Animal
+{
+    public void Breathe() { ... }
+}
+public class Dog : Animal // nasljeđuje
+{
+    public void Bark() { ... }
+}
+var dog = new Dog();
+dog.Breathe(); // naslijeđeno — radi!</pre>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pillar-card">
+              <div class="pillar-icon">🦎</div>
+              <div class="pillar-title">4. Polimorfizam</div>
+              <div class="pillar-tagline">"Ista poruka, različito ponašanje"</div>
+              <div class="code-block mt-2">
+                <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+                <pre style="font-size:0.75rem">IUserRepository repo = new UserRepository(); // pravi SQL
+// ili za testove:
+IUserRepository repo = new FakeUserRepository(); // lažni
+// Isti poziv, različita implementacija ispod:
+var user = await repo.GetByIdAsync(userId);</pre>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- B1: REPOSITORY + UoW -->
+      <section class="content-section" id="b1">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-boxes me-1"></i> Paterni</div>
+          <h1 class="module-title">Repository + Unit of Work</h1>
+        </div>
+
+        <h4>Repository Pattern — Radnik u skladištu</h4>
+        <p><strong>Problem:</strong> Ako pišeš <code>SELECT * FROM Users</code> direktno u poslovnoj logici, zauvijek si vezan za SQL Server. Ne možeš testirati. Ne možeš zamijeniti bazu.</p>
+        <p><strong>Rješenje:</strong> Napravi "posrednika" (repository) čiji jedini posao je razgovor s bazom.</p>
+
+        <div class="flow-diagram">
+          <div class="flow-step">
+            <div class="flow-step-num">→</div>
+            <div class="flow-step-label">Poslovna logika</div>
+            <div class="flow-step-desc">Govori: "Daj mi sve korisnike"</div>
+          </div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">→</div>
+            <div class="flow-step-label">IUserRepository</div>
+            <div class="flow-step-desc">Interfejs — posrednik</div>
+          </div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">→</div>
+            <div class="flow-step-label">UserRepository → SQL Server</div>
+            <div class="flow-step-desc">Pravi SQL upit — poslovna logika to ne vidi</div>
+          </div>
+        </div>
+
+        <div class="info-box good"><i class="bi bi-check-circle-fill"></i><div>Ako zamijenite SQL Server za MongoDB sutra — samo prepisujete <code>UserRepository</code>. Poslovna logika se uopće ne mijenja.</div></div>
+
+        <h4 class="mt-4">Unit of Work — sve ili ništa</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>public interface IUnitOfWork
+{
+    Task&lt;int&gt; SaveChangesAsync(CancellationToken ct = default);
+}
+
+// U handleru:
+await _userRepository.AddAsync(noviKorisnik);
+await _appliedJobRepository.AddAsync(noviAppliciran);
+await _unitOfWork.SaveChangesAsync(); // JEDAN commit — oba ili nijedan</pre>
+        </div>
+      </section>
+
+      <!-- B2: CQRS -->
+      <section class="content-section" id="b2">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-lightning me-1"></i> CQRS</div>
+          <h1 class="module-title">CQRS sa MediatR-om</h1>
+        </div>
+
+        <p><strong>Ideja:</strong> Razdvoji čitanje od pisanja. Čitanje i pisanje imaju različite potrebe. Čitanje treba biti brzo. Pisanje treba biti sigurno i validirano.</p>
+
+        <div class="cqrs-split">
+          <div class="cqrs-side cqrs-query">
+            <div class="cqrs-label"><i class="bi bi-eye me-1"></i>Query — samo čitanje</div>
+            <div class="code-block mt-2 mb-0">
+              <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+              <pre style="font-size:0.75rem">public class GetJobsQuery { }
+public class GetJobDetailsQuery
+{
+    public Guid JobId { get; set; }
+}</pre>
+            </div>
+          </div>
+          <div class="cqrs-side cqrs-command">
+            <div class="cqrs-label"><i class="bi bi-pencil me-1"></i>Command — mijenja stanje</div>
+            <div class="code-block mt-2 mb-0">
+              <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+              <pre style="font-size:0.75rem">public class ApplyForJobCommand
+{
+    public Guid JobId { get; set; }
+}
+public class LikeJobCommand
+{
+    public Guid JobId { get; set; }
+}</pre>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="mt-4">MediatR u API endpointu</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// U API endpointu:
+var poslovi = await _mediator.Send(new GetJobsQuery { SearchTerm = "developer" });
+//                                   ↑ MediatR pronalazi GetJobsQueryHandler i poziva ga
+
+// API kontroler NIKAD ne uvozi GetJobsQueryHandler direktno.
+// Zna samo za GetJobsQuery (zahtjev). MediatR radi routing.</pre>
+        </div>
+      </section>
+
+      <!-- B3: JWT -->
+      <section class="content-section" id="b3">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-shield-lock me-1"></i> Auth</div>
+          <h1 class="module-title">JWT Autentifikacija 🔐</h1>
+        </div>
+
+        <p>Kad se prijaviš, server te ne pamti između zahtjeva (HTTP je bez stanja). Umjesto toga, daje ti <strong>token</strong> — potpisani string koji dokazuje ko si.</p>
+
+        <div class="jwt-steps">
+          <div class="jwt-step"><div class="jwt-step-icon">📝</div><div><strong>1.</strong> POST /api/auth/login s emailom i lozinkom</div></div>
+          <div class="jwt-step"><div class="jwt-step-icon">🔍</div><div><strong>2.</strong> Server provjerava kredencijale u bazi</div></div>
+          <div class="jwt-step"><div class="jwt-step-icon">🎫</div><div><strong>3.</strong> Server pravi JWT token: <code>eyJhbGciOi...</code> (enkodira ID korisnika, role, istek, potpis)</div></div>
+          <div class="jwt-step"><div class="jwt-step-icon">💾</div><div><strong>4.</strong> Klijent čuva token (localStorage ili cookie)</div></div>
+          <div class="jwt-step"><div class="jwt-step-icon">📤</div><div><strong>5.</strong> Svaki budući zahtjev uključuje token: <code>Authorization: Bearer eyJ...</code></div></div>
+          <div class="jwt-step"><div class="jwt-step-icon">✅</div><div><strong>6.</strong> Server validira potpis na svakom zahtjevu — validan → autenticiran, istekao/izmijenjen → 401</div></div>
+        </div>
+
+        <div class="code-block mt-3">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span><span class="text-muted small">Infrastructure/Services/TokenService.cs</span></div>
+          <pre>// TokenService.cs u Infrastructure sloju pravi ove tokene
+public string CreateToken(User user)
+{
+    var claims = new[]
+    {
+        new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+        new Claim(ClaimTypes.Email, user.Email),
+    };
+
+    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_secret));
+    var token = new JwtSecurityToken(
+        claims: claims,
+        expires: DateTime.UtcNow.AddHours(24),
+        signingCredentials: new SigningCredentials(key, SecurityAlgorithms.HmacSha256)
+    );
+
+    return new JwtSecurityTokenHandler().WriteToken(token);
+}</pre>
+        </div>
+      </section>
+
+      <!-- B4: FRONTEND -->
+      <section class="content-section" id="b4">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-layout-text-window me-1"></i> Frontend</div>
+          <h1 class="module-title">Vue 3 + Nuxt Frontend</h1>
+        </div>
+
+        <p>Backend je fabrika. Frontend je izlog prodavnice.</p>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="pillar-card text-center">
+              <div class="pillar-icon mx-auto"><i class="bi bi-filetype-vue"></i></div>
+              <div class="pillar-title">Vue 3</div>
+              <div class="pillar-tagline">UI framework</div>
+              <small class="opacity-65">Komponente — samosadržeći dijelovi UI-ja s vlastitim HTML-om, CSS-om i logikom</small>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pillar-card text-center">
+              <div class="pillar-icon mx-auto"><i class="bi bi-globe"></i></div>
+              <div class="pillar-title">Nuxt 3</div>
+              <div class="pillar-tagline">Meta-framework</div>
+              <small class="opacity-65">File-based routing: <code>app/pages/jobs.vue</code> → automatski postaje <code>/jobs</code> URL</small>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pillar-card text-center">
+              <div class="pillar-icon mx-auto"><i class="bi bi-database"></i></div>
+              <div class="pillar-title">Pinia</div>
+              <div class="pillar-tagline">State management</div>
+              <small class="opacity-65">Čuva podatke koje više komponenti dijeli — kao prijavljeni korisnik</small>
+            </div>
+          </div>
+        </div>
+
+        <h4>Auth store</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">typescript</span><span class="text-muted small">app/stores/auth.ts</span></div>
+          <pre>// Pinia store — čuva: je li korisnik prijavljen? ime? token?
+export const useAuthStore = defineStore('auth', {
+    state: () => ({
+        user: null as User | null,
+        token: null as string | null,
+        isAuthenticated: false
+    }),
+    actions: {
+        async login(email: string, password: string) {
+            const { token, user } = await $fetch('/api/auth/login', {
+                method: 'POST',
+                body: { email, password }
+            })
+            this.token = token
+            this.user = user
+            this.isAuthenticated = true
+        }
+    }
+})</pre>
+        </div>
+
+        <h4 class="mt-4">Composables — ponovna upotreba logike</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">typescript</span><span class="text-muted small">app/composables/useJobs.ts</span></div>
+          <pre>// "Kako dohvatiti poslove?" — koristi bilo koja stranica koja treba poslove
+export function useJobs() {
+    const jobs = ref([])
+    const isLoading = ref(false)
+
+    async function fetchJobs(searchTerm?: string) {
+        isLoading.value = true
+        jobs.value = await $fetch('/api/jobs', { params: { search: searchTerm } })
+        isLoading.value = false
+    }
+
+    return { jobs, isLoading, fetchJobs }
+}</pre>
+        </div>
+      </section>
+
+      <!-- B5: MAPA UCENJA -->
+      <section class="content-section" id="b5">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-map me-1"></i> Mapa učenja</div>
+          <h1 class="module-title">Tvoja mapa učenja</h1>
+        </div>
+        <p>Da bi potpuno razumio ovaj codebase, uči ove stvari ovim redoslijedom:</p>
+        <div class="mt-3">
+          <div class="roadmap-item"><div class="roadmap-num">1</div><div><div class="roadmap-title">C# osnove</div><div class="roadmap-desc">Klase, interfejsi, metode, generici (<code>List&lt;T&gt;</code>, <code>Task&lt;T&gt;</code>)</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">2</div><div><div class="roadmap-title">OOP stubovi</div><div class="roadmap-desc">Enkapsulacija, apstrakcija, nasljeđivanje, polimorfizam</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">3</div><div><div class="roadmap-title">Interfejsi i Dependency Injection</div><div class="roadmap-desc">Najvažniji koncept u ovom codebaseu</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">4</div><div><div class="roadmap-title">Entity Framework Core</div><div class="roadmap-desc">DbContext, DbSet, migrations, LINQ upiti</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">5</div><div><div class="roadmap-title">ASP.NET Core</div><div class="roadmap-desc">Kontroleri, middleware, routing, autentifikacija</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">6</div><div><div class="roadmap-title">CQRS s MediatR-om</div><div class="roadmap-desc">Commands, Queries, Handlers</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">7</div><div><div class="roadmap-title">Clean Architecture</div><div class="roadmap-desc">Slojevi, pravila zavisnosti, zašto postoje</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">8</div><div><div class="roadmap-title">Repository + Unit of Work</div><div class="roadmap-desc">Organizacija pristupa bazi podataka</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">9</div><div><div class="roadmap-title">JWT autentifikacija</div><div class="roadmap-desc">Tokeni, claims, autorizacija</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">10</div><div><div class="roadmap-title">Vue 3 + Nuxt 3</div><div class="roadmap-desc">Komponente, composables, routing, stanje</div></div></div>
+        </div>
+        <div class="info-box tip mt-3"><i class="bi bi-lightbulb-fill"></i><div>Svaki koncept u ovim sekcijama mapira direktno na prave fajlove u projektu. Otvori ih. Čitaj ih. Tako učiš.</div></div>
+      </section>
+
+      <!-- B6: BRZI VODIC -->
+      <section class="content-section" id="b6">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-lightning-charge me-1"></i> Referenca</div>
+          <h1 class="module-title">Brzi referentni vodič</h1>
+        </div>
+
+        <h5 class="fw-bold mb-3">Koncept → Fajl</h5>
+        <table class="cheat-table mb-4">
+          <tr><td>Entitet (šta User JESTE)</td><td>src/Core/Domain/Domain/Entities/User.cs</td></tr>
+          <tr><td>Repository interface (obećanje)</td><td>src/Core/Domain/Domain/Repositories/IUserRepository.cs</td></tr>
+          <tr><td>Repository implementacija (pravi kod)</td><td>src/Infrastructure/.../Repositories/UserRepository.cs</td></tr>
+          <tr><td>Unit of Work interface</td><td>src/Core/Domain/Domain/Repositories/IUnitOfWork.cs</td></tr>
+          <tr><td>CQRS Query</td><td>src/Core/Application/Application/Features/Jobs/GetJobs/</td></tr>
+          <tr><td>CQRS Command</td><td>src/Core/Application/Application/Features/Jobs/ApplyForJob/</td></tr>
+          <tr><td>DI wiring (Infrastructure)</td><td>src/Infrastructure/JobPortal.Infrastructure/DependencyInjection.cs</td></tr>
+          <tr><td>App entry point</td><td>src/Hosts/JobPortal.Api/Program.cs</td></tr>
+          <tr><td>Database context</td><td>src/Infrastructure/.../Database/AppDbContext.cs</td></tr>
+          <tr><td>JWT token kreiranje</td><td>src/Infrastructure/.../Services/TokenService.cs</td></tr>
+          <tr><td>Frontend stranice</td><td>src/Hosts/Skipsearch.Client/app/pages/</td></tr>
+          <tr><td>Auth store (frontend)</td><td>src/Hosts/Skipsearch.Client/app/stores/auth.ts</td></tr>
+        </table>
+
+        <h5 class="fw-bold mb-3">Cheat Sheet patterna</h5>
+        <table class="content-table">
+          <thead><tr><th>Koncept</th><th>Jednostavna verzija</th></tr></thead>
+          <tbody>
+            <tr><td>Clean Architecture</td><td>4 sprata, svaki s jednim poslom, razgovaraju samo prema dolje</td></tr>
+            <tr><td>Domain</td><td>Blueprinti i obećanja (nema pravog koda)</td></tr>
+            <tr><td>CQRS</td><td>Commands mijenjaju stvari, Queries čitaju stvari</td></tr>
+            <tr><td>Infrastructure</td><td>Pravi kod za bazu i servise</td></tr>
+            <tr><td>Repository Pattern</td><td>Radnik između mozga i baze</td></tr>
+            <tr><td>Unit of Work</td><td>Sve-ili-ništa snimanje</td></tr>
+            <tr><td>Inversion of Control</td><td>Mozak traži obećanje, soba za žičanje odlučuje šta dobije</td></tr>
+            <tr><td>Dependency Injection</td><td>Soba za žičanje (DependencyInjection.cs)</td></tr>
+            <tr><td>Modular Monolith</td><td>Jedna aplikacija, organizovana kao zasebni moduli</td></tr>
+            <tr><td>MediatR</td><td>Sekretar koji rutira commands/queries na pravi handler</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Mobile sidebar toggle -->
+  <button class="sidebar-toggle" id="sidebarToggle">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="bs" data-bs-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kurs — Od Nule do Heroja</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold gradient-text" href="index.html">
+        <i class="bi bi-code-slash me-2"></i>Od Nule do Heroja
+      </a>
+      <div class="d-flex align-items-center gap-3 ms-auto">
+        <a href="index.html" class="nav-link-custom">Početna</a>
+        <a href="course.html" class="nav-link-custom active">Kurs</a>
+        <a href="project.html" class="nav-link-custom">Projekat</a>
+        <button class="btn btn-theme-toggle" id="themeToggle" title="Promijeni temu">
+          <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="course-layout">
+
+    <!-- SIDEBAR -->
+    <aside class="course-sidebar" id="sidebar">
+      <div class="sidebar-label">Kurs</div>
+      <button class="sidebar-nav-item active" data-section="m0">
+        <span class="module-num"><i class="bi bi-house-fill"></i></span>
+        Uvod
+      </button>
+
+      <div class="sidebar-label mt-3">Moduli</div>
+      <button class="sidebar-nav-item" data-section="m1">
+        <span class="module-num">1</span>
+        Mindset developera
+      </button>
+      <button class="sidebar-nav-item" data-section="m2">
+        <span class="module-num">2</span>
+        Alati — Setup
+      </button>
+      <button class="sidebar-nav-item" data-section="m3">
+        <span class="module-num">3</span>
+        Komandna linija
+      </button>
+      <button class="sidebar-nav-item" data-section="m4">
+        <span class="module-num">4</span>
+        Kako radi Web
+      </button>
+      <button class="sidebar-nav-item" data-section="m5">
+        <span class="module-num">5</span>
+        Git — Kontrola verzija
+      </button>
+      <button class="sidebar-nav-item" data-section="m6">
+        <span class="module-num">6</span>
+        Hello World
+      </button>
+      <button class="sidebar-nav-item" data-section="m7">
+        <span class="module-num">7</span>
+        Osnove programiranja
+      </button>
+      <button class="sidebar-nav-item" data-section="m8">
+        <span class="module-num">8</span>
+        Baze podataka i SQL
+      </button>
+      <button class="sidebar-nav-item" data-section="m9">
+        <span class="module-num">9</span>
+        Backend razvoj — API-ji
+      </button>
+      <button class="sidebar-nav-item" data-section="m10">
+        <span class="module-num">10</span>
+        Frontend razvoj
+      </button>
+      <button class="sidebar-nav-item" data-section="m11">
+        <span class="module-num">11</span>
+        Arhitekturni paterni
+      </button>
+      <button class="sidebar-nav-item" data-section="m12">
+        <span class="module-num">12</span>
+        AI kao tvoj asistent
+      </button>
+      <button class="sidebar-nav-item" data-section="m13">
+        <span class="module-num">13</span>
+        Workflow — Pravi radni dan
+      </button>
+      <button class="sidebar-nav-item" data-section="m14">
+        <span class="module-num">14</span>
+        Debugging — Rješavanje problema
+      </button>
+      <button class="sidebar-nav-item" data-section="m15">
+        <span class="module-num">15</span>
+        Kako dobiti posao
+      </button>
+
+      <div class="sidebar-label mt-3">Dodaci</div>
+      <button class="sidebar-nav-item" data-section="appendix-a">
+        <span class="module-num"><i class="bi bi-book"></i></span>
+        Rječnik pojmova
+      </button>
+      <button class="sidebar-nav-item" data-section="appendix-b">
+        <span class="module-num"><i class="bi bi-calendar3"></i></span>
+        Plan po sedmicama
+      </button>
+      <button class="sidebar-nav-item" data-section="appendix-c">
+        <span class="module-num"><i class="bi bi-lightning"></i></span>
+        Brzi vodič
+      </button>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <main class="course-main">
+
+      <!-- M0: INTRO -->
+      <section class="content-section active page-fade-in" id="m0">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-rocket-takeoff me-1"></i> Dobrodošao</div>
+          <h1 class="module-title">Od Nule do Heroja</h1>
+          <p class="lead opacity-75">Kompletni kurs za početnike — od prve linije koda do pravog developera.</p>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-info-circle-fill"></i>
+          <div><strong>Kako koristiti ovaj kurs:</strong> Čitaj redoslijedom. Svaki modul gradi na prethodnom. Kad vidiš primjer koda — otvori ga, pročitaj ga, razumij ga. Teorija bez prakse ne vrijedi ništa.</div>
+        </div>
+
+        <div class="row g-3 my-4">
+          <div class="col-md-4">
+            <div class="pattern-card text-center">
+              <div class="pattern-card-icon">🎯</div>
+              <div class="pattern-card-title">15 Modula</div>
+              <div class="pattern-card-desc">Od osnova do arhitekture. Sve što trebaš za pravi posao.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pattern-card text-center">
+              <div class="pattern-card-icon">💻</div>
+              <div class="pattern-card-title">Pravi kod</div>
+              <div class="pattern-card-desc">Svi primjeri su iz stvarnog enterprise projekta — ne tutoriala.</div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pattern-card text-center">
+              <div class="pattern-card-icon">🇧🇦</div>
+              <div class="pattern-card-title">Na bosanskom</div>
+              <div class="pattern-card-desc">Koncepti objašnjeni jasno, na tvom jeziku.</div>
+            </div>
+          </div>
+        </div>
+
+        <h4 class="fw-bold mt-4 mb-3">Šta ćeš naučiti</h4>
+        <div class="row g-2">
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Komandna linija i terminal</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Git, GitHub i timski rad</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Programiranje u C# i TypeScript</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Baze podataka i SQL</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Backend API-ji (.NET)</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Frontend razvoj (Vue 3)</li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <ul class="list-unstyled">
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Clean Architecture</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>AI alati i asistenti</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Debugging i rješavanje problema</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Profesionalni workflow</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Kako izgraditi portfolio</li>
+              <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Kako dobiti prvi posao</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-4">
+          <button class="btn btn-primary-gradient px-4 py-2" onclick="showSection('m1')">
+            Počni sa Modulom 1 <i class="bi bi-arrow-right ms-2"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- M1: MINDSET -->
+      <section class="content-section" id="m1">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 1</div>
+          <h1 class="module-title">Mindset developera</h1>
+        </div>
+
+        <h4>Šta je programiranje?</h4>
+        <p>Programiranje je davanje instrukcija računaru na jeziku koji on razumije. Računar radi <strong>tačno</strong> ono što mu kažeš — ne ono što si mislio da si rekao. U početku je ovo frustrirajuće. Onda počneš cijeniti tu preciznost.</p>
+
+        <div class="info-box tip">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div><strong>Najvažnija vještina nije pisanje koda.</strong> Najvažnija vještina je <strong>razlaganje problema na manje dijelove</strong>. Svaki feature koji ikad budeš gradio je veliki problem napravljen od malih. Posao developera je razložiti veliko na malo, dok svaki mali dio nije dovoljno jasan da se kodira.</div>
+        </div>
+
+        <h4 class="mt-4">Više vremena ćeš čitati kod nego što ga pišeš</h4>
+        <p>Na prvom danu pravog posla, neko ti da codebase od 100.000 linija. Moraš ga navigirati, razumjeti, i mijenjati ga bez da ga pokvariš. Ovaj kurs uči tu vještinu — ne samo "kako napisati petlju".</p>
+
+        <h4 class="mt-4">Greške nisu neuspjeh — one su informacija</h4>
+        <p>Svaka poruka o grešci je računar koji ti govori tačno šta je pošlo naopako. Tvoj posao je pažljivo je pročitati. Developeri koji napreduju brzo su oni koji <strong>čitaju poruke o greškama</strong> umjesto da panikuju.</p>
+
+        <h4 class="mt-4">Dva načina rada</h4>
+        <table class="content-table">
+          <thead><tr><th>Način rada</th><th>Opis</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Flow (tok)</strong></td><td>Znaš šta gradiš, gradiš to, sve ima smisla</td></tr>
+            <tr><td><strong>Zapeo si</strong></td><td>Nešto ne radi, ne znaš zašto, ništa ne funkcioniše</td></tr>
+          </tbody>
+        </table>
+        <p>Znati kako prijeći iz "zapeo sam" u "flow" — to je prava vještina. Modul 14 to pokriva u detalje.</p>
+      </section>
+
+      <!-- M2: ALATI -->
+      <section class="content-section" id="m2">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 2</div>
+          <h1 class="module-title">Alati — Setup radne stanice</h1>
+        </div>
+        <p>Svaki developer treba isti osnovni set alata. Evo tačno šta instalirati i zašto.</p>
+
+        <h4>1. Editor koda — VS Code</h4>
+        <p><strong>Šta je to:</strong> Tekstualni editor dizajniran za pisanje koda. Naglašava sintaksu, hvata greške, dozvoljava ti da skačeš na definicije, pokrećeš kod i koristiš AI asistente.</p>
+
+        <div class="info-box good">
+          <i class="bi bi-download"></i>
+          <div><strong>Instaliraj:</strong> <code>https://code.visualstudio.com</code><br/><strong>Zašto ne Notepad?</strong> Notepad te neće upozoriti ako zaboraviš zagradu dok program ne crašuje. VS Code te upozorava odmah, crvenom bojom, sa brojem linije.</div>
+        </div>
+
+        <h5 class="mt-3">Obavezne VS Code ekstenzije:</h5>
+        <table class="content-table">
+          <thead><tr><th>Ekstenzija</th><th>Zašto</th></tr></thead>
+          <tbody>
+            <tr><td><code>C# Dev Kit</code></td><td>.NET backend razvoj (koristi se u ovom projektu)</td></tr>
+            <tr><td><code>Volar</code></td><td>Vue 3 frontend razvoj</td></tr>
+            <tr><td><code>Tailwind CSS IntelliSense</code></td><td>Autocomplete za CSS klase</td></tr>
+            <tr><td><code>SQLTools + SQL Server</code></td><td>Pokreći upite direktno iz VS Code-a</td></tr>
+            <tr><td><code>REST Client</code></td><td>Testiraj API-je sa <code>.http</code> fajlovima</td></tr>
+            <tr><td><code>ESLint + Prettier</code></td><td>Automatski formatira kod konzistentno</td></tr>
+            <tr><td><code>GitLens</code></td><td>Pokazuje ko je promijenio svaku liniju i kada</td></tr>
+          </tbody>
+        </table>
+
+        <h5 class="mt-3">Prečice koje ćeš koristiti svaki dan:</h5>
+        <table class="content-table">
+          <thead><tr><th>Prečica</th><th>Akcija</th></tr></thead>
+          <tbody>
+            <tr><td><code>Ctrl + P</code></td><td>Pronađi bilo koji fajl po imenu</td></tr>
+            <tr><td><code>Ctrl + Shift + F</code></td><td>Pretraži tekst u svim fajlovima</td></tr>
+            <tr><td><code>F12</code></td><td>Idi na definiciju funkcije/klase</td></tr>
+            <tr><td><code>Ctrl + `</code></td><td>Otvori ugrađeni terminal</td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="mt-4">2. AI Asistent — Claude Code / Cursor</h4>
+        <p><strong>Claude Code</strong> je AI unutar VS Code-a koji može čitati cijeli projekat, objašnjavati fajlove, pisati features i hvatati bugove.</p>
+
+        <div class="cqrs-split mt-3">
+          <div class="cqrs-side cqrs-query">
+            <div class="cqrs-label"><i class="bi bi-check-lg me-1"></i>Dobra upotreba</div>
+            <ul class="small mb-0 ps-3">
+              <li>"Objasni šta ova funkcija radi"</li>
+              <li>"Zašto ovaj test ne prolazi?"</li>
+              <li>"Postoji li bolji način da ovo napišem?"</li>
+            </ul>
+          </div>
+          <div class="cqrs-side cqrs-command">
+            <div class="cqrs-label"><i class="bi bi-x-lg me-1"></i>Loša upotreba</div>
+            <ul class="small mb-0 ps-3">
+              <li>"Napiši cijeli feature za mene"</li>
+              <li>Kopirati kod koji ne razumiješ</li>
+              <li>Ne čitati šta AI vrati</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="mt-4">3. Alat za bazu podataka — Azure Data Studio</h4>
+        <p>Vizualni alat za upravljanje SQL Server bazom. Možeš viditi tabele, pokretati upite i debuggovati podatke bez pisanja koda.</p>
+
+        <h4 class="mt-4">4. Runtime okruženja</h4>
+        <table class="content-table">
+          <thead><tr><th>Runtime</th><th>Jezik</th><th>Instaliraj</th></tr></thead>
+          <tbody>
+            <tr><td><code>.NET 10 SDK</code></td><td>C#</td><td>dotnet.microsoft.com/download</td></tr>
+            <tr><td><code>Node.js 22 LTS</code></td><td>JavaScript/TypeScript</td><td>nodejs.org</td></tr>
+          </tbody>
+        </table>
+        <div class="info-box tip"><i class="bi bi-info-circle-fill"></i><div><strong>LTS = Long Term Support</strong> — stabilna verzija. Uvijek instaliraj LTS osim ako ti nije rečeno drugačije.</div></div>
+      </section>
+
+      <!-- M3: KOMANDNA LINIJA -->
+      <section class="content-section" id="m3">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 3</div>
+          <h1 class="module-title">Komandna linija</h1>
+        </div>
+        <p>Komandna linija (terminal, shell, konzola) je tekstualni interfejs prema računaru. Kucaš komande umjesto klikanja ikonama. Kad se naučiš na ovo, radit ćeš duplo brže.</p>
+
+        <h4>Osnove navigacije</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre>pwd                  # Gdje sam? (Print Working Directory)
+ls                   # Lista fajlova u trenutnoj mapi
+ls -la               # Lista fajlova uključujući skrivene
+cd ime-mape          # Uđi u mapu
+cd ..                # Idi gore jedan nivo
+cd ~                 # Idi u home direktorij
+
+mkdir moja-mapa      # Napravi novu mapu
+cp fajl.txt kopija.txt  # Kopiraj fajl
+mv fajl.txt novo.txt    # Preimenuj/premjesti fajl
+rm fajl.txt          # Obriši fajl (pažnja — nema korpa!)
+cat fajl.txt         # Ispiši sadržaj fajla
+code .               # Otvori VS Code u trenutnoj mapi</pre>
+        </div>
+
+        <h4 class="mt-4">Vježba — uradi ovo odmah</h4>
+        <ol class="steps-list">
+          <li>Otvori terminal (<code>Ctrl + `</code> u VS Code)</li>
+          <li>Ukucaj <code>cd ~</code> — idi u home mapu</li>
+          <li>Ukucaj <code>mkdir moj-prvi-projekat</code> — napravi mapu</li>
+          <li>Ukucaj <code>cd moj-prvi-projekat</code> — uđi u nju</li>
+          <li>Ukucaj <code>pwd</code> — potvrdi gdje si</li>
+          <li>Ukucaj <code>code .</code> — otvori VS Code ovdje</li>
+        </ol>
+
+        <h4 class="mt-4">Pokretanje programa iz terminala</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre># Pokreni .NET aplikaciju
+dotnet run --project CRMEnterpriseSolution
+
+# Pokreni Node.js aplikaciju
+npm run dev
+
+# Instaliraj zavisnosti
+npm install
+
+# Pokreni testove
+dotnet test
+npm test</pre>
+        </div>
+      </section>
+
+      <!-- M4: WEB -->
+      <section class="content-section" id="m4">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 4</div>
+          <h1 class="module-title">Kako radi Web</h1>
+        </div>
+        <p>Prije nego počneš graditi web aplikacije, moraš razumjeti <strong>ciklus zahtjev-odgovor</strong>. Ovo je jedan od najvažnijih koncepata u web razvoju.</p>
+
+        <h4>Ciklus zahtjev-odgovor</h4>
+        <div class="architecture-diagram">
+          <div class="flow-diagram">
+            <div class="flow-step">
+              <div class="flow-step-num">1</div>
+              <div class="flow-step-icon">🌐</div>
+              <div class="flow-step-label">Browser</div>
+              <div class="flow-step-desc">Šalje <code>GET /home</code> zahtjev serveru</div>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step">
+              <div class="flow-step-num">2</div>
+              <div class="flow-step-icon">⚙️</div>
+              <div class="flow-step-label">Server</div>
+              <div class="flow-step-desc">Prima zahtjev, obrađuje ga, priprema odgovor</div>
+            </div>
+            <div class="flow-arrow"></div>
+            <div class="flow-step">
+              <div class="flow-step-num">3</div>
+              <div class="flow-step-icon">📄</div>
+              <div class="flow-step-label">Odgovor</div>
+              <div class="flow-step-desc">Server vraća <code>200 OK + HTML/JSON</code></div>
+            </div>
+          </div>
+        </div>
+
+        <h4>HTTP metode — šta možeš raditi</h4>
+        <table class="content-table">
+          <thead><tr><th>Metoda</th><th>Značenje</th><th>Primjer</th></tr></thead>
+          <tbody>
+            <tr><td><code>GET</code></td><td>Čitaj / dohvati podatke</td><td>Dohvati listu kandidata</td></tr>
+            <tr><td><code>POST</code></td><td>Napravi nešto novo</td><td>Napravi novog kandidata</td></tr>
+            <tr><td><code>PUT</code></td><td>Zamijeni nešto</td><td>Ažuriraj sve podatke kandidata</td></tr>
+            <tr><td><code>PATCH</code></td><td>Ažuriraj dio nečega</td><td>Promijeni samo email kandidata</td></tr>
+            <tr><td><code>DELETE</code></td><td>Obriši nešto</td><td>Obriši kandidata</td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="mt-4">HTTP status kodovi — šta server odgovori</h4>
+        <table class="content-table">
+          <thead><tr><th>Kod</th><th>Značenje</th></tr></thead>
+          <tbody>
+            <tr><td><code>200</code></td><td>OK — uspjelo je</td></tr>
+            <tr><td><code>201</code></td><td>Created — nova stvar je napravljena</td></tr>
+            <tr><td><code>400</code></td><td>Bad Request — poslao si pogrešne podatke</td></tr>
+            <tr><td><code>401</code></td><td>Unauthorized — nisi prijavljen</td></tr>
+            <tr><td><code>403</code></td><td>Forbidden — prijavljen si ali nemaš pravo</td></tr>
+            <tr><td><code>404</code></td><td>Not Found — ta stvar ne postoji</td></tr>
+            <tr><td><code>500</code></td><td>Internal Server Error — nešto se pokvarilo na serveru</td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="mt-4">Šta je API?</h4>
+        <p>API (Application Programming Interface) je URL na serveru koji prima zahtjeve i vraća podatke — obično kao JSON.</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">json</span></div>
+          <pre>{
+  "id": 42,
+  "ime": "Emir",
+  "prezime": "Hodžić",
+  "email": "emir@example.com",
+  "aktivan": true
+}</pre>
+        </div>
+
+        <h4 class="mt-4">Testiranje API-ja sa REST Client ekstenzijom</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">http</span></div>
+          <pre>### Dohvati sve kandidate
+GET http://localhost:5001/api/candidates
+Authorization: Bearer tvoj-token
+
+### Napravi kandidata
+POST http://localhost:5001/api/candidates
+Content-Type: application/json
+
+{
+  "firstName": "Emir",
+  "lastName": "Hodžić"
+}</pre>
+        </div>
+      </section>
+
+      <!-- M5: GIT -->
+      <section class="content-section" id="m5">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 5</div>
+          <h1 class="module-title">Git — Kontrola verzija</h1>
+        </div>
+        <p>Git nije opcija. To je najosnovniji alat u profesionalnom razvoju softvera. Omogućava ti da snemaš snapshote koda, poništiš greške, sarađuješ s drugima i isporučuješ s povjerenjem.</p>
+
+        <div class="info-box rule">
+          <i class="bi bi-bookmark-fill"></i>
+          <div><strong>Osnovna ideja — commit:</strong> Commit je snimljeni snapshot tvog koda u jednom trenutku. Razmišljaj o tome kao o snimanju igrice. Uvijek se možeš vratiti nazad.</div>
+        </div>
+
+        <h4 class="mt-4">Svakodnevne komande</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre>git init                          # Pokreni novi git repozitorij
+git status                        # Koji su fajlovi promijenjeni?
+git add ime-fajla.txt             # Dodaj fajl u staging
+git add .                         # Dodaj sve promijenjene fajlove
+git commit -m "dodaj login feature" # Snimi snapshot sa porukom
+git log                           # Vidi historiju commitova</pre>
+        </div>
+
+        <h4 class="mt-4">Branches — rad na featuresima sigurno</h4>
+        <p>Branch je paralelna verzija tvog koda. Praviš ga za rad na nekom featureu, a onda ga spojiš kad je završen. Znači da je main kod uvijek stabilan.</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre>git checkout -b feature/dodaj-login  # Napravi i prebaci se na novi branch
+git checkout main                    # Vrati se na main
+git merge feature/dodaj-login        # Spoji feature u main
+git branch -d feature/dodaj-login    # Obriši branch nakon spajanja</pre>
+        </div>
+
+        <h4 class="mt-4">Rad sa GitHub-om</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre>git clone https://github.com/user/repo.git  # Preuzmi repozitorij
+git push origin main                         # Pošalji svoje commitove
+git pull                                      # Preuzmi tuđe commitove
+git fetch                                     # Provjeri promjene bez spajanja</pre>
+        </div>
+
+        <h4 class="mt-4">Format commit poruke (koristi se u ovom projektu)</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">text</span></div>
+          <pre>feat(candidate): dodaj bulk CSV import s validacijom
+fix(chatbot): gracefully handle Ollama timeout
+docs(api): dodaj ProspectXCandidate endpoint referencu
+refactor(auth): simplify token validaciju</pre>
+        </div>
+        <p>Format: <code>tip(scope): kratki opis</code> — ovo se zove <strong>Conventional Commits</strong>.</p>
+
+        <h4 class="mt-4">Zlatna pravila Gita</h4>
+        <ol class="steps-list">
+          <li><strong>Commituj često.</strong> Mali commitovi su lakše razumljivi i mogu se poništiti.</li>
+          <li><strong>Nikad direktno u main</strong> na timskom projektu. Uvijek koristi branch.</li>
+          <li><strong>Piši smislene commit poruke.</strong> "fix stuff" je beskorisan za 6 mjeseci.</li>
+          <li><strong>Pull prije push-a.</strong> Preuzmi tuđe promjene prije nego uploaduješ svoje.</li>
+        </ol>
+      </section>
+
+      <!-- M6: HELLO WORLD -->
+      <section class="content-section" id="m6">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 6</div>
+          <h1 class="module-title">Hello World — Tvoj prvi program</h1>
+        </div>
+        <p>Sada pišemo kod. Radićemo to u tri jezika koji se koriste u ovom projektu.</p>
+
+        <h4>C# (.NET) — koristi se u crm-backend-u</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span><span class="text-muted small">HelloWorld.cs</span></div>
+          <pre>Console.WriteLine("Zdravo, Svijete!");</pre>
+        </div>
+
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre>dotnet new console -n HelloWorld
+cd HelloWorld
+dotnet run
+# Output: Zdravo, Svijete!</pre>
+        </div>
+
+        <h5 class="mt-3">Malo kompleksniji primjer:</h5>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>string ime = "Aldin";
+int godine = 25;
+bool uci = true;
+
+Console.WriteLine($"Zdravo, {ime}!");
+Console.WriteLine($"Godine: {godine}");
+Console.WriteLine($"Trenutno uči: {uci}");
+// Output: Zdravo, Aldin!
+// Output: Godine: 25
+// Output: Trenutno uči: True</pre>
+        </div>
+
+        <h4 class="mt-4">TypeScript — koristi se u crm-chatbot backend-u</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">typescript</span><span class="text-muted small">hello.ts</span></div>
+          <pre>const ime: string = "Aldin";
+const godine: number = 25;
+
+console.log(`Zdravo, ${ime}!`);
+console.log(`Godine: ${godine}`);</pre>
+        </div>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre>npm install -g tsx
+tsx hello.ts</pre>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div><strong>Šta se desilo?</strong> Napisao si tekst u fajlu → runtime (dotnet, node) pročitao taj tekst → pretvorio tvoje instrukcije u mašinski kod → mašinski kod se izvršio i dao output. To je sve što je programiranje.</div>
+        </div>
+      </section>
+
+      <!-- M7: OSNOVE -->
+      <section class="content-section" id="m7">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 7</div>
+          <h1 class="module-title">Osnove programiranja</h1>
+        </div>
+        <p>Ovi koncepti su isti u svakom jeziku. Naučiš ih jednom, primjenjuješ ih svugdje.</p>
+
+        <h4>Varijable — čuvanje vrijednosti</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>string ime = "Emir";      // tekst
+int godine = 25;          // cijeli broj
+decimal plata = 2500.50m; // decimalni broj
+bool aktivan = true;      // tačno ili netačno</pre>
+        </div>
+
+        <h4 class="mt-4">Uvjeti — donošenje odluka</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>if (godine >= 18)
+{
+    Console.WriteLine("Punoljetan");
+}
+else if (godine >= 13)
+{
+    Console.WriteLine("Tinejdžer");
+}
+else
+{
+    Console.WriteLine("Dijete");
+}</pre>
+        </div>
+
+        <h4 class="mt-4">Petlje — ponavljanje akcija</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// For petlja — kad znaš koliko puta
+for (int i = 0; i &lt; 5; i++)
+{
+    Console.WriteLine($"Iteracija {i}");
+}
+
+// Foreach — kad prolazite kroz kolekciju
+var imena = new List&lt;string&gt; { "Aldin", "Emir", "Sara" };
+foreach (var ime in imena)
+{
+    Console.WriteLine(ime);
+}</pre>
+        </div>
+
+        <h4 class="mt-4">Funkcije/Metode — blokovi koda koji se mogu ponovo koristiti</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Definiši funkciju
+string Pozdravi(string ime, int godine)
+{
+    return $"Zdravo {ime}, imate {godine} godina.";
+}
+
+// Pozovi funkciju
+string poruka = Pozdravi("Emir", 25);
+Console.WriteLine(poruka); // "Zdravo Emir, imate 25 godina."</pre>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div><strong>Zašto funkcije?</strong> Jer pišeš logiku jednom i koristiš je više puta. Ako logika treba promjenu — mijenjaš je na jednom mjestu, ne na dvadeset.</div>
+        </div>
+
+        <h4 class="mt-4">Klase i Objekti — modeliranje stvarnih stvari</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Blueprint (klasa)
+public class Kandidat
+{
+    public int Id { get; set; }
+    public string Ime { get; set; } = "";
+    public string Prezime { get; set; } = "";
+    public string Email { get; set; } = "";
+
+    public string PunoIme()
+    {
+        return $"{Ime} {Prezime}";
+    }
+}
+
+// Instanca (objekat)
+var kandidat = new Kandidat
+{
+    Id = 1,
+    Ime = "Emir",
+    Prezime = "Hodžić",
+    Email = "emir@example.com"
+};
+
+Console.WriteLine(kandidat.PunoIme()); // "Emir Hodžić"</pre>
+        </div>
+
+        <h4 class="mt-4">Interfejsi — ugovori bez implementacije</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Ugovor (interface)
+public interface IEmailServis
+{
+    Task PošaljiAsync(string na, string tema, string tijelo);
+}
+
+// Prava implementacija: šalje via Gmail
+public class GmailEmailServis : IEmailServis
+{
+    public async Task PošaljiAsync(string na, string tema, string tijelo)
+    {
+        // ... Gmail-specifičan kod
+    }
+}
+
+// Lažna implementacija za testiranje — ne radi ništa
+public class LažniEmailServis : IEmailServis
+{
+    public async Task PošaljiAsync(string na, string tema, string tijelo)
+    {
+        Console.WriteLine($"[LAŽNI] Email na {na}: {tema}");
+    }
+}</pre>
+        </div>
+
+        <h4 class="mt-4">Async / Await — ne zamrzavaj dok čekaš</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Loše — blokira cijeli thread dok čeka bazu
+var kandidati = DohvatiSveSinkrono();  // Sve se zamrzne
+
+// Dobro — oslobađa thread dok čeka, vraća se kad je gotovo
+var kandidati = await DohvatiSveAsinhrono();  // Ništa se ne zamrzne</pre>
+        </div>
+
+        <div class="info-box rule">
+          <i class="bi bi-bookmark-fill"></i>
+          <div>Svaka metoda koja radi I/O (baza, mreža, disk) treba biti <code>async</code> i vraćati <code>Task&lt;T&gt;</code>. Vidjet ćeš <code>async/await</code> svugdje u ovom projektu.</div>
+        </div>
+      </section>
+
+      <!-- M8: BAZE -->
+      <section class="content-section" id="m8">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 8</div>
+          <h1 class="module-title">Baze podataka i SQL</h1>
+        </div>
+        <p>Skoro svaka aplikacija čuva podatke. Ti podaci žive u bazi podataka. SQL (Structured Query Language) je jezik kojim razgovaraš s njom.</p>
+
+        <h4>Šta je relaciona baza podataka?</h4>
+        <div class="architecture-diagram">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <div class="layer-card layer-domain">
+                <div class="layer-label">Tabela: Kandidati</div>
+                <table class="cheat-table mt-2">
+                  <tr><td>Id</td><td>Ime</td><td>KomId</td></tr>
+                  <tr><td>1</td><td>Emir</td><td>10</td></tr>
+                  <tr><td>2</td><td>Sara</td><td>11</td></tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="layer-card layer-infra">
+                <div class="layer-label">Tabela: Kompanije</div>
+                <table class="cheat-table mt-2">
+                  <tr><td>Id</td><td>Naziv</td></tr>
+                  <tr><td>10</td><td>Acme d.o.o.</td></tr>
+                  <tr><td>11</td><td>Globex d.d.</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+          <p class="small text-center mt-2 opacity-65 mb-0">KomId (KompanijaId) je strani ključ — povezuje se na tabelu Kompanije</p>
+        </div>
+
+        <h4>Osnovni SQL — četiri operacije (CRUD)</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">sql</span></div>
+          <pre>-- CREATE — umetni nove podatke
+INSERT INTO Kandidati (Ime, Prezime, Email)
+VALUES ('Emir', 'Hodžić', 'emir@example.com');
+
+-- READ — upitaj podatke
+SELECT Id, Ime, Prezime, Email
+FROM Kandidati
+WHERE Aktivan = 1
+ORDER BY Prezime ASC;
+
+-- UPDATE — promijeni postojeće podatke
+UPDATE Kandidati
+SET Email = 'novi@example.com'
+WHERE Id = 42;
+
+-- DELETE — obriši podatke
+DELETE FROM Kandidati
+WHERE Id = 42;</pre>
+        </div>
+
+        <h4 class="mt-4">Spajanje tabela (JOIN)</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">sql</span></div>
+          <pre>-- Dohvati ime kandidata I naziv njihove kompanije
+SELECT
+    k.Ime,
+    k.Prezime,
+    kom.Naziv AS NazivKompanije
+FROM Kandidati k
+INNER JOIN Kompanije kom ON k.KomId = kom.Id
+WHERE k.Aktivan = 1;</pre>
+        </div>
+
+        <h4 class="mt-4">ORM — Entity Framework Core</h4>
+        <p>Pisanje raw SQL-a za svaku operaciju je zamorno i sklono greškama. ORM mapira C# klase na tabele baze automatski.</p>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Umjesto pisanja SQL-a:
+// SELECT * FROM Kandidati WHERE Aktivan = 1 ORDER BY Prezime
+
+// Pišeš C#:
+var kandidati = await _context.Kandodati
+    .Where(k => k.Aktivan)
+    .OrderBy(k => k.Prezime)
+    .ToListAsync();</pre>
+        </div>
+
+        <h4 class="mt-4">Migrations — sigurna promjena šeme baze</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre># Napravi migration nakon promjene C# modela
+dotnet ef migrations add dodaj-kandidat-linkedin-url \
+  --project Database.EF \
+  --startup-project CRMEnterpriseSolution
+
+# Primijeni na bazu
+dotnet ef database update \
+  --project Database.EF \
+  --startup-project CRMEnterpriseSolution</pre>
+        </div>
+      </section>
+
+      <!-- M9: BACKEND -->
+      <section class="content-section" id="m9">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 9</div>
+          <h1 class="module-title">Backend razvoj — API-ji</h1>
+        </div>
+        <p>Backend je dio aplikacije koji radi na serveru, rukuje poslovnom logikom i komunicira s bazom podataka.</p>
+
+        <h4>Clean Architecture — pattern koji ovaj projekat koristi</h4>
+        <div class="architecture-diagram">
+          <div class="layer-card layer-host">
+            <div class="layer-label">Presentation (Prezentacijski sloj)</div>
+            <div class="layer-title">Kontroleri / API Endpointi</div>
+            <div class="layer-desc">Prima HTTP zahtjeve, vraća HTTP odgovore. Ne sadrži poslovnu logiku.</div>
+          </div>
+          <div class="layer-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="layer-card layer-app">
+            <div class="layer-label">Application (Aplikacijski sloj)</div>
+            <div class="layer-title">Feature klase / Handleri</div>
+            <div class="layer-desc">Sva poslovna logika. Orkestira domenski sloj.</div>
+          </div>
+          <div class="layer-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="layer-card layer-domain">
+            <div class="layer-label">Domain (Domenski sloj)</div>
+            <div class="layer-title">Entiteti / Interfejsi</div>
+            <div class="layer-desc">Čiste C# klase. Nula vanjskih zavisnosti. Srce aplikacije.</div>
+          </div>
+          <div class="layer-arrow"><i class="bi bi-arrow-down"></i></div>
+          <div class="layer-card layer-infra">
+            <div class="layer-label">Infrastructure (Infrastrukturni sloj)</div>
+            <div class="layer-title">Baze, Eksterni API-ji, Servisi</div>
+            <div class="layer-desc">EF Core, Dapper, Email, RabbitMQ — pravi implementacijski detalji.</div>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Kompletan životni ciklus zahtjeva</h4>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">1</div>
+          <div><div class="walkthrough-step-layer">Browser</div><div class="walkthrough-step-text"><code>GET /api/candidates/42</code> — zahtjev stiže na server</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">2</div>
+          <div><div class="walkthrough-step-layer">Presentation</div><div class="walkthrough-step-text"><code>CandidatesController.GetById(42)</code> — prima HTTP zahtjev</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">3</div>
+          <div><div class="walkthrough-step-layer">Application</div><div class="walkthrough-step-text"><code>CandidateFeature.GetByIdAsync(42)</code> — provjeri role, pokreni logiku</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">4</div>
+          <div><div class="walkthrough-step-layer">Infrastructure</div><div class="walkthrough-step-text"><code>CandidateRepository.GetByIdAsync(42)</code> — upit na SQL Server</div></div>
+        </div>
+        <div class="walkthrough-step">
+          <div class="walkthrough-step-num">5</div>
+          <div><div class="walkthrough-step-layer">Browser</div><div class="walkthrough-step-text"><code>200 OK + JSON</code> — odgovor se vraća kroz slojeve</div></div>
+        </div>
+
+        <h4 class="mt-4">Pisanje kontrolera</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>[ApiController]
+[Route("api/[controller]")]
+public class KandidatiController : ControllerBase
+{
+    private readonly CandidateFeature _feature;
+
+    public KandidatiController(CandidateFeature feature)
+    {
+        _feature = feature;
+    }
+
+    [HttpGet("{id}")]
+    [Authorize(Roles = "Administrator,Manager,Recruiter")]
+    public async Task&lt;IActionResult&gt; GetById(int id)
+    {
+        var kandidat = await _feature.GetByIdAsync(id);
+        if (kandidat == null) return NotFound();
+        return Ok(kandidat);
+    }
+}</pre>
+        </div>
+        <div class="info-box tip"><i class="bi bi-lightbulb-fill"></i><div>Primijeti: kontroler je tanak. On samo rukuje HTTP pitanjima (status kodovi, routing, auth). Sva poslovna logika je u Feature klasi.</div></div>
+
+        <h4 class="mt-4">Dependency Injection</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">csharp</span></div>
+          <pre>// Deklariraš šta trebaš — framework to pruža
+public class CandidateFeature : BaseFeature
+{
+    private readonly ICandidateRepository _repo;
+    private readonly IEmailService _email;
+
+    public CandidateFeature(ICandidateRepository repo, IEmailService email)
+    {
+        _repo = repo;
+        _email = email;
+    }
+}
+
+// Registruješ sve jednom, na jednom mjestu (Extensions.cs)
+services.AddScoped&lt;CandidateFeature&gt;();
+services.AddScoped&lt;ICandidateRepository, CandidateRepository&gt;();
+services.AddScoped&lt;IEmailService, FluentEmailService&gt;();</pre>
+        </div>
+      </section>
+
+      <!-- M10: FRONTEND -->
+      <section class="content-section" id="m10">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 10</div>
+          <h1 class="module-title">Frontend razvoj</h1>
+        </div>
+        <p>Frontend je ono što korisnik vidi i s čim interaguje — dugmad, forme, liste i navigacija.</p>
+
+        <div class="row g-3 mb-4">
+          <div class="col-md-4">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="bi bi-filetype-html"></i></div>
+              <div class="pillar-title">HTML — Struktura</div>
+              <div class="pillar-tagline">"Šta je na stranici"</div>
+              <small class="opacity-65">Naslovi, paragrafi, dugmad, formulare — skeleton web stranice.</small>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="bi bi-filetype-css"></i></div>
+              <div class="pillar-title">CSS — Stil</div>
+              <div class="pillar-tagline">"Kako to izgleda"</div>
+              <small class="opacity-65">Boje, fontovi, razmaci, animacije — sve vizualno.</small>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="pillar-card">
+              <div class="pillar-icon"><i class="bi bi-filetype-js"></i></div>
+              <div class="pillar-title">JavaScript — Ponašanje</div>
+              <div class="pillar-tagline">"Šta se dešava na klik"</div>
+              <small class="opacity-65">Klikovi, forme, dohvatanje podataka — interaktivnost.</small>
+            </div>
+          </div>
+        </div>
+
+        <h4>Vue 3 — component framework koji ovaj projekat koristi</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">vue</span><span class="text-muted small">KandidatKartica.vue</span></div>
+          <pre>&lt;template&gt;
+    &lt;div class="bg-white rounded-lg p-6 shadow-md"&gt;
+        &lt;h2&gt;{{ kandidat.ime }} {{ kandidat.prezime }}&lt;/h2&gt;
+        &lt;p&gt;{{ kandidat.email }}&lt;/p&gt;
+        &lt;button @click="urediKandidata"&gt;Uredi&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script setup lang="ts"&gt;
+// Props — podaci proslijeđeni u komponentu
+const props = defineProps&lt;{
+    kandidat: { id: number; ime: string; prezime: string; email: string }
+}&gt;()
+
+// Emits — događaji koji se šalju iz komponente
+const emit = defineEmits&lt;{ uredi: [id: number] }&gt;()
+
+function urediKandidata() {
+    emit('uredi', props.kandidat.id)
+}
+&lt;/script&gt;</pre>
+        </div>
+
+        <h4 class="mt-4">Pinia — upravljanje stanjem</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">typescript</span><span class="text-muted small">stores/kandidati.ts</span></div>
+          <pre>import { defineStore } from 'pinia'
+
+export const useKandidatiStore = defineStore('kandidati', {
+    state: () => ({
+        kandidati: [] as Kandidat[],
+        ucitava: false,
+    }),
+    actions: {
+        async dohvatiSve() {
+            this.ucitava = true
+            const odgovor = await fetch('/api/candidates')
+            this.kandidati = await odgovor.json()
+            this.ucitava = false
+        }
+    }
+})
+
+// U bilo kojoj komponenti:
+const store = useKandidatiStore()
+await store.dohvatiSve()
+// store.kandidati je sada dostupan svuda</pre>
+        </div>
+      </section>
+
+      <!-- M11: ARHITEKTURA -->
+      <section class="content-section" id="m11">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 11</div>
+          <h1 class="module-title">Arhitekturni paterni</h1>
+        </div>
+        <p>Ovo su ponavljajuća rješenja na uobičajene probleme. Vidjet ćeš ih svugdje, uključujući ovaj projekat. Ne trebaš ih memorisati na dan 1 — vrati se ovdje kad ih sretneš.</p>
+
+        <div class="row g-3 my-4">
+          <div class="col-md-6">
+            <div class="pattern-card">
+              <div class="pattern-card-icon">🏗️</div>
+              <div class="pattern-card-title">Clean Architecture</div>
+              <div class="pattern-card-desc">4 sloja sa strogim pravilima. Prezentacija → Aplikacija → Domena → Infrastruktura. Svaki sloj može samo zavisiti od sloja desno od njega.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pattern-card">
+              <div class="pattern-card-icon">📦</div>
+              <div class="pattern-card-title">Repository Pattern</div>
+              <div class="pattern-card-desc">Klasa koja rukuje svim pristupom bazi za jedan tip entiteta. Tvoj feature kod ne zna jesu li podaci u SQL Serveru, PostgreSQL-u ili fajlu.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pattern-card">
+              <div class="pattern-card-icon">⚡</div>
+              <div class="pattern-card-title">CQRS</div>
+              <div class="pattern-card-desc">Command Query Responsibility Segregation — razdvoji čitanje od pisanja. Dapper za čitanja, EF Core za pisanja. Svaka strana je optimizovana za svoju svrhu.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pattern-card">
+              <div class="pattern-card-icon">💉</div>
+              <div class="pattern-card-title">Dependency Injection</div>
+              <div class="pattern-card-desc">Ne pravi zavisnosti unutar klase — primi ih. Framework ih ubrizgava. Zamjena implementacije je jedna linija koda. Testiranje je lako.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pattern-card">
+              <div class="pattern-card-icon">📡</div>
+              <div class="pattern-card-title">Observer / Pub-Sub</div>
+              <div class="pattern-card-desc">Kad se desi nešto (kandidat je napravljen), objavi događaj. Pretplatnici reaguju nezavisno. Ovaj projekat koristi MassTransit + RabbitMQ.</div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="pattern-card">
+              <div class="pattern-card-icon">🎯</div>
+              <div class="pattern-card-title">Feature Pattern</div>
+              <div class="pattern-card-desc">Umjesto dijeljenja koda po tipu (svi kontroleri zajedno), ovaj projekat dijeli po featureu. Svih 28 operacija kandidata žive u CandidateFeature.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box tip">
+          <i class="bi bi-lightbulb-fill"></i>
+          <div><strong>Pravilo 80/20 arhitekture:</strong> Ne trebaš savršenu arhitekturu od prvog dana. Počni s najjednostavnijim što funkcioniše. Refaktoriraj kad osjetiš bol. Paterni gore postoje jer su developeri osjetili bol bez njih. Razumijevanje ZAŠTO postoje važnije je od mehaničke primjene.</div>
+        </div>
+      </section>
+
+      <!-- M12: AI -->
+      <section class="content-section" id="m12">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 12</div>
+          <h1 class="module-title">AI kao tvoj asistent</h1>
+        </div>
+        <p>Imaš Claude Code ugrađen u editor. Evo kako ga koristiti da budeš 10x produktivniji bez da postaješ ovisan.</p>
+
+        <div class="cqrs-split">
+          <div class="cqrs-side cqrs-query">
+            <div class="cqrs-label"><i class="bi bi-check-circle-fill me-1"></i>AI je dobar za</div>
+            <ul class="small ps-3 mb-0">
+              <li>Objašnjavanje koda</li>
+              <li>Pisanje boilerplate-a</li>
+              <li>Pronalazak bugova</li>
+              <li>Prijedloge poboljšanja</li>
+              <li>Debugging greški</li>
+            </ul>
+          </div>
+          <div class="cqrs-side cqrs-command">
+            <div class="cqrs-label"><i class="bi bi-x-circle-fill me-1"></i>Ti moraš raditi ovo</div>
+            <ul class="small ps-3 mb-0">
+              <li>Razumjeti zahtjeve</li>
+              <li>Procjenjivati arhitekturu</li>
+              <li>Testirati da li zaista radi</li>
+              <li>Debugging u produkciji</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Pravi workflow s AI-om</h4>
+        <ol class="steps-list">
+          <li><strong>Ti razumiješ problem.</strong> Čitaj kod, grešku, zahtjev.</li>
+          <li><strong>Ti formuiraš hipotezu.</strong> "Mislim da ovo ne radi jer..."</li>
+          <li><strong>Pitaš AI da pomogne izvršiti.</strong> "Možeš li napisati SQL upit za ovo?"</li>
+          <li><strong>Ti pregledaš šta AI vrati.</strong> Čitaj svaku liniju. Pitaj "zašto" ako nešto nije jasno.</li>
+          <li><strong>Ti testiraš.</strong> Pokreni to. Vidi radi li. Provjeri rubne slučajeve.</li>
+        </ol>
+
+        <h4 class="mt-4">Primjeri prompta</h4>
+        <div class="info-box warn">
+          <i class="bi bi-x-circle-fill"></i>
+          <div><strong>Loš prompt:</strong> "Popravi mi kod"</div>
+        </div>
+        <div class="info-box good">
+          <i class="bi bi-check-circle-fill"></i>
+          <div><strong>Dobar prompt:</strong> "U <code>crm-backend/Application/Features/CandidateFeature.cs</code>, metoda <code>SearchAsync</code> vraća nula rezultata kad tražim 'emir'. Pretraga ide kroz <code>Database.Dapper/Repositories/GetCandidatesBasedOnSearch.cs</code>. Možeš li proći kroz kod i reći zašto bi ovo vraćalo prazne rezultate?"</div>
+        </div>
+      </section>
+
+      <!-- M13: WORKFLOW -->
+      <section class="content-section" id="m13">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 13</div>
+          <h1 class="module-title">Workflow — Kako izgleda pravi radni dan</h1>
+        </div>
+
+        <h4>Ujutro: razumi šta gradiš</h4>
+        <p>Prije nego napišeš jednu liniju, odgovori na ova pitanja:</p>
+        <ol class="steps-list">
+          <li>Šta korisnik zapravo želi?</li>
+          <li>Gdje u codebaseu ovo dodiruje? (Koji fajlovi, koji features)</li>
+          <li>Koja je najjednostavnija verzija koja ispunjava zahtjev?</li>
+        </ol>
+
+        <h4 class="mt-4">Pokretanje zadatka</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">bash</span></div>
+          <pre># 1. Provjeri da si na najnovijem mainu
+git checkout main
+git pull
+
+# 2. Napravi branch za tvoj rad
+git checkout -b feature/42-dodaj-linkedin-url
+
+# 3. Otvori VS Code
+code .
+
+# 4. Pokreni aplikaciju da možeš testirati dok radiš
+cd crm-backend && dotnet run --project CRMEnterpriseSolution</pre>
+        </div>
+
+        <h4 class="mt-4">Red-Green ciklus — kako graditi inkrementalno</h4>
+        <div class="flow-diagram">
+          <div class="flow-step">
+            <div class="flow-step-num">1</div>
+            <div class="flow-step-icon" style="color:#dc3545">🔴</div>
+            <div class="flow-step-label">Red</div>
+            <div class="flow-step-desc">Napiši test koji ne prolazi (feature još ne postoji)</div>
+          </div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">2</div>
+            <div class="flow-step-icon" style="color:#198754">🟢</div>
+            <div class="flow-step-label">Green</div>
+            <div class="flow-step-desc">Napiši minimalni kod da test prođe</div>
+          </div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step">
+            <div class="flow-step-num">3</div>
+            <div class="flow-step-icon">🔵</div>
+            <div class="flow-step-label">Refactor</div>
+            <div class="flow-step-desc">Počisti kod bez kvarenja testa</div>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Pravilo 15 minuta — kad si zapeo</h4>
+        <div class="info-box rule">
+          <i class="bi bi-clock-fill"></i>
+          <div>Pokušaj sam riješiti 15 minuta. Čitaj grešku pažljivo. Pretraži codebase. Čitaj dokumentaciju. Guglaj.<br/><br/>Nakon 15 minuta, traži pomoć. Opišite:<br/>1. Šta pokušavaš uraditi<br/>2. Šta si očekivao da se desi<br/>3. Šta se zapravo desilo (zalijepite punu grešku)<br/>4. Šta si već probao</div>
+        </div>
+      </section>
+
+      <!-- M14: DEBUGGING -->
+      <section class="content-section" id="m14">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 14</div>
+          <h1 class="module-title">Debugging — Rješavanje problema</h1>
+        </div>
+
+        <h4>Proces debugginga</h4>
+        <div class="flow-diagram">
+          <div class="flow-step"><div class="flow-step-num">1</div><div class="flow-step-label">Reprodukuj problem pouzdano</div></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step"><div class="flow-step-num">2</div><div class="flow-step-label">Čitaj punu poruku greške (ne samo prvu liniju)</div></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step"><div class="flow-step-num">3</div><div class="flow-step-label">Pronađi gdje u kodu je greška bačena (stack trace)</div></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step"><div class="flow-step-num">4</div><div class="flow-step-label">Formiraj hipotezu o uzroku</div></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step"><div class="flow-step-num">5</div><div class="flow-step-label">Testiraj hipotezu (dodaj log, koristi debugger)</div></div>
+          <div class="flow-arrow"></div>
+          <div class="flow-step"><div class="flow-step-num">6</div><div class="flow-step-label">Popravi uzrok (ne simptom!)</div></div>
+        </div>
+
+        <h4 class="mt-4">Čitanje stack trace-a</h4>
+        <div class="code-block">
+          <div class="code-block-header"><span class="code-block-lang">text</span></div>
+          <pre>System.NullReferenceException: Object reference not set...
+   at CandidateFeature.GetByIdAsync(Int32 id)    ← OVDJE SE POKVARILO
+   at CandidatesController.GetById(Int32 id)      ← POZVANO ODAVDE
+   at Microsoft.AspNetCore.Mvc.Infrastructure...</pre>
+        </div>
+        <p>Greška je u <code>CandidateFeature.GetByIdAsync</code>. Otvori taj fajl.</p>
+
+        <h4 class="mt-4">Česte greške i šta znače</h4>
+        <table class="content-table">
+          <thead><tr><th>Greška</th><th>Šta znači</th><th>Gdje gledati</th></tr></thead>
+          <tbody>
+            <tr><td><code>NullReferenceException</code></td><td>Koristio si varijablu koja je null</td><td>Koja varijabla u stack trace liniji?</td></tr>
+            <tr><td><code>401 Unauthorized</code></td><td>Nisi prijavljen ili token nije validan</td><td>Auth konfiguracija, istek tokena</td></tr>
+            <tr><td><code>403 Forbidden</code></td><td>Prijavljen si ali nemaš pravo rolu</td><td><code>[Authorize(Roles = "...")]</code></td></tr>
+            <tr><td><code>Connection refused</code></td><td>Servis ne radi ili pogrešan port</td><td>Da li baza/API radi?</td></tr>
+            <tr><td><code>Cannot find module</code></td><td>npm paket nije instaliran</td><td><code>npm install</code></td></tr>
+            <tr><td><code>CORS error</code></td><td>Backend blokira frontend zahtjeve</td><td>CORS konfiguracija u <code>Program.cs</code></td></tr>
+          </tbody>
+        </table>
+
+        <h4 class="mt-4">Ovaj projekat — česti problemi</h4>
+        <table class="content-table">
+          <thead><tr><th>Simptom</th><th>Rješenje</th></tr></thead>
+          <tbody>
+            <tr><td>CRM app se ne pokreće</td><td><code>net start "SQL Server (SQLEXPRESS)"</code></td></tr>
+            <tr><td>Chatbot nema AI odgovore</td><td><code>ollama serve</code></td></tr>
+            <tr><td>API vraća 401</td><td>Provjeri JWT konfiguraciju u <code>appsettings.json</code></td></tr>
+            <tr><td><code>npm run dev</code> ne radi</td><td><code>npm install</code></td></tr>
+            <tr><td>Port zauzet</td><td><code>netstat -ano | findstr :5000</code></td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- M15: POSAO -->
+      <section class="content-section" id="m15">
+        <div class="module-header">
+          <div class="module-number-badge">Modul 15</div>
+          <h1 class="module-title">Kako dobiti posao</h1>
+        </div>
+
+        <h4>Šta kompanije zapravo žele od junior developera</h4>
+        <div class="row g-3 mb-4">
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">1</div><div><div class="walkthrough-step-layer">Najvažnije</div><div class="walkthrough-step-text"><strong>Možeš li učiti?</strong> Više od bilo koje specifične tehnologije.</div></div></div></div>
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">2</div><div><div class="walkthrough-step-layer">Komunikacija</div><div class="walkthrough-step-text"><strong>Možeš li objasniti</strong> šta si gradio i zašto?</div></div></div></div>
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">3</div><div><div class="walkthrough-step-layer">Problem solving</div><div class="walkthrough-step-text"><strong>Odustaješ ili istražuješ</strong> metodički?</div></div></div></div>
+          <div class="col-md-6"><div class="walkthrough-step"><div class="walkthrough-step-num">4</div><div><div class="walkthrough-step-layer">Kvalitet</div><div class="walkthrough-step-text"><strong>Pišeš čitljiv kod</strong> koji kolega može pročitati za 6 mjeseci?</div></div></div></div>
+        </div>
+
+        <h4>Checklist za portfolio projekat</h4>
+        <div class="info-box good">
+          <i class="bi bi-list-check"></i>
+          <div>
+            <ul class="mb-0 ps-3">
+              <li>Jasna svrha (rješava pravi problem)</li>
+              <li>README s opisom, uputama za pokretanje i screenshotima</li>
+              <li>Čist, čitljiv kod</li>
+              <li>Backend API i frontend koji ga poziva</li>
+              <li>Baza podataka s nekim zanimljivim upitima</li>
+              <li>Deploy negdje (Azure free tier, Railway, Render)</li>
+              <li>Testovi za osnovnu poslovnu logiku</li>
+            </ul>
+          </div>
+        </div>
+
+        <h4 class="mt-4">Kako pričati o ovom projektu na intervjuu</h4>
+        <p>Radio si na pravom enterprise sistemu: CRM s AI asistentom, izgrađen u .NET Clean Architecture s Vue frontendom, SQL Server bazom i chatbotom pogonjenim lokalnim LLM-om. To nije tutorial projekat — to je pravi produkcijski sistem.</p>
+
+        <div class="info-box tip">
+          <i class="bi bi-chat-dots-fill"></i>
+          <div>
+            Vježbaj objašnjavati:<br/>
+            • <strong>Šta sistem radi</strong> (ne-tehnički, kao da pričaš s product managerom)<br/>
+            • <strong>Na čemu specifično si radio</strong> (budi iskren i precizan)<br/>
+            • <strong>Problem koji si riješio</strong> — bug koji si popravio, feature koji si napravio<br/>
+            • <strong>Šta bi uradio drugačije</strong> — pokazuje da možeš reflektovati i učiti
+          </div>
+        </div>
+
+        <h4 class="mt-4">Tvoj prvi posao</h4>
+        <p>Tvoj prvi posao neće biti savršen posao. Bit će mjesto gdje učiš brže nego što bi ikad mogao sam, jer si okružen ljudima koji su već napravili greške koje ti tek trebaš napraviti.</p>
+        <div class="cqrs-split">
+          <div class="cqrs-side cqrs-query">
+            <div class="cqrs-label"><i class="bi bi-check-lg me-1"></i>Traži firmu gdje</div>
+            <ul class="small ps-3 mb-0">
+              <li>Možeš vidjeti pravi kod prije prihvatanja</li>
+              <li>Developeri odgovaraju na pitanja</li>
+              <li>Code review je pravi proces</li>
+              <li>Tim koristi version control ispravno</li>
+            </ul>
+          </div>
+          <div class="cqrs-side cqrs-command">
+            <div class="cqrs-label"><i class="bi bi-x-lg me-1"></i>Izbjegavaj firme gdje</div>
+            <ul class="small ps-3 mb-0">
+              <li>Svi su juniori</li>
+              <li>Niko ne radi code review</li>
+              <li>"Refaktorisat ćemo to kasnije" je stalni odgovor</li>
+              <li>Nema version controla</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- APPENDIX A: RJECNIK -->
+      <section class="content-section" id="appendix-a">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-book me-1"></i> Dodatak A</div>
+          <h1 class="module-title">Rječnik pojmova</h1>
+        </div>
+        <table class="content-table">
+          <thead><tr><th>Pojam</th><th>Jednostavno objašnjenje</th></tr></thead>
+          <tbody>
+            <tr><td><code>API</code></td><td>URL na serveru koji odgovara na zahtjeve s podacima</td></tr>
+            <tr><td><code>Async/Await</code></td><td>Pokreni kod bez zamrzavanja dok čeka spore operacije</td></tr>
+            <tr><td><code>Branch</code></td><td>Paralelna kopija tvog koda za bezbjedno raditi na featureu</td></tr>
+            <tr><td><code>Clean Architecture</code></td><td>Kod podijeljen u slojeve — svaki sloj ima jedan posao</td></tr>
+            <tr><td><code>CLI</code></td><td>Command Line Interface — kucanje komandi umjesto klikanja</td></tr>
+            <tr><td><code>CORS</code></td><td>Browser sigurnosno pravilo — backend mora eksplicitno dozvoliti frontend domenu</td></tr>
+            <tr><td><code>CRUD</code></td><td>Create, Read, Update, Delete — četiri osnovne operacije nad podacima</td></tr>
+            <tr><td><code>Dependency Injection</code></td><td>Daj klasi šta treba umjesto da to sama pravi</td></tr>
+            <tr><td><code>Domain</code></td><td>Poslovni prostor koji tvoj softver modelira (kandidati, poslovi, fakture)</td></tr>
+            <tr><td><code>EF Core</code></td><td>.NET biblioteka koja mapira C# klase na tabele baze podataka</td></tr>
+            <tr><td><code>Entity</code></td><td>Domenski objekat s identitetom (Kandidat, Kompanija)</td></tr>
+            <tr><td><code>Frontend</code></td><td>Dio koji korisnik vidi u browseru</td></tr>
+            <tr><td><code>Git</code></td><td>Alat koji čuva snapshote tvog koda i omogućuje saradnju</td></tr>
+            <tr><td><code>HTTP</code></td><td>Protokol koji browseri i serveri koriste za komunikaciju</td></tr>
+            <tr><td><code>Interface</code></td><td>Ugovor koji deklarira šta klasa mora raditi, bez implementacije</td></tr>
+            <tr><td><code>JSON</code></td><td>Tekstualni format za strukturirane podatke, koristi se u API-jima</td></tr>
+            <tr><td><code>JWT</code></td><td>Samosadržeći token koji dokazuje ko si (kao potpisana lična karta)</td></tr>
+            <tr><td><code>Migration</code></td><td>Kod koji mijenja šemu baze na ponovljiv, reverzibilan način</td></tr>
+            <tr><td><code>ORM</code></td><td>Alat koji mapira kodne objekte na tabele baze</td></tr>
+            <tr><td><code>Pull Request</code></td><td>Zahtjev za spajanje brancha — okida review prije prihvatanja</td></tr>
+            <tr><td><code>Repository Pattern</code></td><td>Klasa koja rukuje svim pristupom bazi za jedan tip entiteta</td></tr>
+            <tr><td><code>REST</code></td><td>Stil dizajniranja API-ja koristeći HTTP glagole i URL-ove</td></tr>
+            <tr><td><code>SQL</code></td><td>Jezik za upitavanje i modificiranje relacionih baza podataka</td></tr>
+            <tr><td><code>Stack Trace</code></td><td>Lanac poziva metoda prikazan kad se desi greška</td></tr>
+            <tr><td><code>TypeScript</code></td><td>JavaScript s tipovima — hvata greške prije pokretanja</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- APPENDIX B: PLAN -->
+      <section class="content-section" id="appendix-b">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-calendar3 me-1"></i> Dodatak B</div>
+          <h1 class="module-title">Plan učenja po sedmicama</h1>
+        </div>
+        <p>Realan raspored za nekoga ko radi 2-4 sata dnevno:</p>
+        <div class="mt-3">
+          <div class="roadmap-item"><div class="roadmap-num">1-2</div><div><div class="roadmap-title">Moduli 1-3</div><div class="roadmap-desc">Ugodniji u terminalu, VS Code postavljen, prvi Git commitovi</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">3-4</div><div><div class="roadmap-title">Moduli 4-5</div><div class="roadmap-desc">Može objasniti HTTP, REST i Git branching s povjerenjem</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">5-6</div><div><div class="roadmap-title">Moduli 6-7</div><div class="roadmap-desc">Napisani mali programi u C# i TypeScript, razumije klase</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">7-8</div><div><div class="roadmap-title">Modul 8</div><div class="roadmap-desc">Može pisati SQL upite, razumije join-ove, postavljena lokalna baza</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">9-11</div><div><div class="roadmap-title">Modul 9</div><div class="roadmap-desc">Može čitati i modificirati CRM backend features, razumije Clean Architecture</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">12-13</div><div><div class="roadmap-title">Modul 10</div><div class="roadmap-desc">Napravljena Vue komponenta, dohvata podatke s API-ja</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">14-15</div><div><div class="roadmap-title">Moduli 11-12</div><div class="roadmap-desc">Razumije patterne, koristi AI efikasno kao partnera</div></div></div>
+          <div class="roadmap-item"><div class="roadmap-num">16+</div><div><div class="roadmap-title">Moduli 13-15</div><div class="roadmap-desc">Radi na pravim featuresima u ovom codebaseu, gradi portfolio projekat</div></div></div>
+        </div>
+      </section>
+
+      <!-- APPENDIX C: BRZI VODIC -->
+      <section class="content-section" id="appendix-c">
+        <div class="module-header">
+          <div class="module-number-badge"><i class="bi bi-lightning me-1"></i> Dodatak C</div>
+          <h1 class="module-title">Brzi vodič</h1>
+        </div>
+
+        <h5 class="fw-bold mb-3">Pokretanje projekata</h5>
+        <table class="cheat-table mb-4">
+          <tr><td>cd crm-backend && dotnet run --project CRMEnterpriseSolution</td><td>Pokreni CRM backend</td></tr>
+          <tr><td>cd crm-chatbot && npm run dev</td><td>Pokreni chatbot</td></tr>
+          <tr><td>cd job-portal/src && npm run dev</td><td>Pokreni job portal</td></tr>
+          <tr><td>dotnet test</td><td>Pokreni testove (.NET)</td></tr>
+          <tr><td>npm test</td><td>Pokreni testove (Node)</td></tr>
+        </table>
+
+        <h5 class="fw-bold mb-3">Git svakodnevni workflow</h5>
+        <table class="cheat-table mb-4">
+          <tr><td>git status</td><td>Vidi šta se promijenilo</td></tr>
+          <tr><td>git add &lt;fajl&gt;</td><td>Stage fajl</td></tr>
+          <tr><td>git commit -m "..."</td><td>Snimi snapshot</td></tr>
+          <tr><td>git push</td><td>Upload na GitHub</td></tr>
+          <tr><td>git pull</td><td>Preuzmi tuđe promjene</td></tr>
+        </table>
+
+        <h5 class="fw-bold mb-3">Pronađi bilo šta u VS Code</h5>
+        <table class="cheat-table mb-4">
+          <tr><td>Ctrl+P</td><td>Pronađi fajl po imenu</td></tr>
+          <tr><td>Ctrl+Shift+F</td><td>Pretraži tekst u svim fajlovima</td></tr>
+          <tr><td>F12</td><td>Idi na definiciju</td></tr>
+          <tr><td>Shift+F12</td><td>Pronađi sve reference</td></tr>
+        </table>
+
+        <h5 class="fw-bold mb-3">Kad si zapeo</h5>
+        <ol class="steps-list">
+          <li>Pročitaj punu poruku greške</li>
+          <li>Pronađi liniju u stack trace-u</li>
+          <li>Dodaj log ili postavi breakpoint</li>
+          <li>Guglaj grešku + naziv tehnologije</li>
+          <li>Nakon 15 min: pitaj, ali opiši šta si probao</li>
+        </ol>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Mobile sidebar toggle -->
+  <button class="sidebar-toggle" id="sidebarToggle">
+    <i class="bi bi-list"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
