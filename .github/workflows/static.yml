@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - 'from-zero-to-hero/**'
+      - '.github/workflows/static.yml'
   workflow_dispatch:
 
 permissions:
