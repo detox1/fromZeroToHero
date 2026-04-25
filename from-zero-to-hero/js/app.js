@@ -1,5 +1,5 @@
 /* ============================================================
-   From Zero to Hero — app.js
+   DinoooKompjuteruuuuu — app.js
    Dark mode toggle + sidebar navigation + scroll behaviour
 ============================================================ */
 

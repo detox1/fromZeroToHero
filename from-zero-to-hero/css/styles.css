@@ -1,5 +1,5 @@
 /* ============================================================
-   FROM ZERO TO HERO — Glavni CSS
+   DinoooKompjuteruuuuu — Glavni CSS
    Bootstrap 5.3 + custom blue gradient theme
    Light / Dark mode support
 ============================================================ */
@@ -925,3 +925,112 @@ code {
   to   { transform: translateX(0); opacity: 1; }
 }
 .sidebar-nav-item.active { animation: slideIn 0.2s ease; }
+
+/* ============================================================
+   DINO PERSONALISATION
+============================================================ */
+
+/* --- Scrolling quote ticker strip --- */
+.dino-quote-strip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1100;
+  height: 36px;
+  overflow: hidden;
+  background: linear-gradient(90deg, rgba(102,16,242,0.85) 0%, rgba(13,110,253,0.85) 100%);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+}
+
+.dino-quote-track {
+  display: flex;
+  gap: 2.5rem;
+  white-space: nowrap;
+  animation: quoteScroll 28s linear infinite;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.dino-quote-track span { flex-shrink: 0; }
+
+@keyframes quoteScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+/* --- Navbar offset for strip --- */
+.glass-nav--below-strip { top: 36px; }
+
+/* --- Fixed DINOOO KOMPJUTERU side boost --- */
+.dino-boost {
+  position: fixed;
+  right: -62px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
+  z-index: 500;
+  pointer-events: none;
+  transform-origin: center center;
+}
+
+.dino-boost-text {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: boostPulse 3s ease-in-out infinite;
+  will-change: transform;
+  white-space: nowrap;
+}
+
+@keyframes boostPulse {
+  0%, 100% { transform: scaleX(1);    opacity: 0.35; }
+  50%       { transform: scaleX(1.06); opacity: 0.65; }
+}
+
+/* --- Personal tag in hero --- */
+.dino-personal-tag {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--blue-1);
+  background: rgba(13,110,253,0.08);
+  border: 1px dashed rgba(13,110,253,0.3);
+  border-radius: 2rem;
+  padding: 0.3rem 0.9rem;
+  gap: 0.25rem;
+}
+
+/* --- DINOOO KOMPJUTERU bar inside code window --- */
+.code-window-boost {
+  background: var(--gradient-main);
+  color: #fff;
+  text-align: center;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.45rem 1rem;
+  border-top: 1px solid rgba(13,110,253,0.2);
+  animation: boostBarFlash 4s ease-in-out infinite;
+}
+
+@keyframes boostBarFlash {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.7; }
+}
+
+/* Adjust hero padding-top for strip + navbar */
+.hero-main { padding-top: 36px; }

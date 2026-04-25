@@ -3,18 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Od Nule do Heroja — Kurs za Web Developere</title>
+  <title>DinoooKompjuteruuuuu — Kurs za Web Developere</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
   <link href="css/styles.css" rel="stylesheet" />
 </head>
 <body>
 
+  <!-- DINO QUOTE — scrolling ticker strip -->
+  <div class="dino-quote-strip" aria-hidden="true">
+    <div class="dino-quote-track">
+      <span>"MORAM ČUĆNUT KAD PRIČAM NA MOBITEL"</span>
+      <span aria-hidden="true">·</span>
+      <span>"MORAM ČUĆNUT KAD PRIČAM NA MOBITEL"</span>
+      <span aria-hidden="true">·</span>
+      <span>"MORAM ČUĆNUT KAD PRIČAM NA MOBITEL"</span>
+      <span aria-hidden="true">·</span>
+      <span>"MORAM ČUĆNUT KAD PRIČAM NA MOBITEL"</span>
+      <span aria-hidden="true">·</span>
+      <span>"MORAM ČUĆNUT KAD PRIČAM NA MOBITEL"</span>
+      <span aria-hidden="true">·</span>
+      <span>"MORAM ČUĆNUT KAD PRIČAM NA MOBITEL"</span>
+      <span aria-hidden="true">·</span>
+    </div>
+  </div>
+
   <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav glass-nav--below-strip">
     <div class="container">
       <a class="navbar-brand fw-bold gradient-text" href="index.html">
-        <i class="bi bi-code-slash me-2"></i>Od Nule do Heroja
+        <i class="bi bi-code-slash me-2"></i>DinoooKompjuteruuuuu
       </a>
       <div class="d-flex align-items-center gap-3 ms-auto">
         <a href="index.html" class="nav-link-custom active">Početna</a>
@@ -27,6 +45,11 @@
     </div>
   </nav>
 
+  <!-- DINO BOOST — fixed side label -->
+  <div class="dino-boost" aria-hidden="true">
+    <span class="dino-boost-text">DINOOO KOMPJUTERU</span>
+  </div>
+
   <!-- MAIN HERO -->
   <section class="hero-main d-flex align-items-center">
     <div class="hero-bg-orb orb-1"></div>
@@ -35,8 +58,11 @@
     <div class="container position-relative z-1">
       <div class="row align-items-center min-vh-100 py-5">
         <div class="col-lg-7 pt-5">
-          <div class="badge-pill mb-4">
+          <div class="badge-pill mb-3">
             <i class="bi bi-rocket-takeoff me-2"></i>Kurs za početnike · Potpuno besplatno
+          </div>
+          <div class="dino-personal-tag mb-4">
+            <i class="bi bi-person-heart me-2"></i>Prilagođeno za <strong>Dina</strong> 💪
           </div>
           <h1 class="hero-title mb-4">
             Od <span class="gradient-text">Nule</span><br />
@@ -77,19 +103,25 @@
               <span class="dot dot-red"></span>
               <span class="dot dot-yellow"></span>
               <span class="dot dot-green"></span>
-              <span class="ms-2 text-muted small">hello-world.cs</span>
+              <span class="ms-2 text-muted small">dino-prog.cs</span>
             </div>
-            <pre class="code-window-body"><span class="code-comment">// Tvoj prvi program</span>
-<span class="code-keyword">string</span> ime = <span class="code-string">"Aldin"</span>;
-<span class="code-keyword">int</span> godine = <span class="code-number">0</span>;
-<span class="code-keyword">bool</span> uce = <span class="code-bool">true</span>;
+            <pre class="code-window-body"><span class="code-comment">// Dinov prvi program</span>
+<span class="code-keyword">var</span> developer = <span class="code-keyword">new</span> <span class="code-fn">Developer</span>();
 
-Console.<span class="code-fn">WriteLine</span>(
-  <span class="code-string">$"Zdravo, {ime}!"</span>
-);
+developer.<span class="code-fn">Ime</span>     = <span class="code-string">"Dino"</span>;
+developer.<span class="code-fn">Mobitel</span>  = <span class="code-bool">true</span>;
+developer.<span class="code-fn">Čuči</span>     = <span class="code-bool">true</span>;
 
-<span class="code-comment">// Output: Zdravo, Aldin!</span>
-<span class="code-comment">// 🎉 Čestitamo — ti si developer!</span></pre>
+<span class="code-keyword">while</span> (developer.<span class="code-fn">Uči</span>())
+{
+  developer.<span class="code-fn">PostajeBolji</span>();
+}
+
+<span class="code-comment">// Output: Dino je HEROJ 🏆</span></pre>
+            <!-- boosting message inside the window -->
+            <div class="code-window-boost">
+              <i class="bi bi-lightning-charge-fill me-1"></i>DINOOO KOMPJUTERU<i class="bi bi-lightning-charge-fill ms-1"></i>
+            </div>
           </div>
         </div>
       </div>
@@ -118,7 +150,7 @@ Console.<span class="code-fn">WriteLine</span>(
                 <i class="bi bi-mortarboard-fill"></i>
               </div>
               <div class="card-hero-badge">15 modula</div>
-              <h3 class="card-hero-title">Kurs: Od Nule do Heroja</h3>
+              <h3 class="card-hero-title">Kurs: DinoooKompjuteruuuuu</h3>
               <p class="card-hero-desc">
                 Kompletni vodič za početnike. Od prvog "Hello World" do profesionalnog developera.
                 Alati, koncepti, arhitektura, workflow — sve na jednom mjestu.
@@ -193,7 +225,7 @@ Console.<span class="code-fn">WriteLine</span>(
   <!-- FOOTER -->
   <footer class="footer py-4">
     <div class="container text-center">
-      <p class="mb-1 fw-semibold gradient-text">Od Nule do Heroja</p>
+      <p class="mb-1 fw-semibold gradient-text">DinoooKompjuteruuuuu</p>
       <p class="text-muted small mb-0">Napravljen s ljubavlju za buduće developere · <i class="bi bi-heart-fill text-danger"></i></p>
     </div>
   </footer>
